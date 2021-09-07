@@ -25,12 +25,15 @@
 		<link rel="stylesheet" href="style/partials/_global.css">
 
 		<style>
-			#moreNmbrs {display: none;}
-			#more1 {display: none;}
-			#moreTommy {display: none;}
+			#moreCotec {display: none;}
+			#moreBosch {display: none;}
+			#moreBoschConnect {display: none;}
+			#moreCERN {display: none;}
 			#moreEDP {display: none;}
 			#moreGo2Space {display: none;}
-			#moreCotec {display: none;}
+			#moreNmbrs {display: none;}
+			#moreSpark {display: none;}
+			#moreTommy {display: none;}
 		</style>
 	</head>
 
@@ -136,7 +139,6 @@
 								<li><a href="#page-4">Hackathons</a></li>
 								<li><a href="#page-5">Side B</a></li>
 								<li><a href="#page-6">Skills</a></li>
-								<li><a href="#page-7">Languages</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -156,7 +158,7 @@
 								<div class="text pl-3">
 									<span class="date">Jul 2021 - Aug 2021</span>
 									<h2>Quality Assurance Summer Intern</h2>
-									<span class="position">HB - Hunger Byte, Porto</span>
+									<span class="position">NMBRS, Lisbon</span>
 									<p style="text-align: justify;">• Designed a WebApp to know the NMBRS’s REST API and OAuth 2.0 flow.</p>
 									<p style="text-align: justify;">• Developed automated tests with Selenium to know if the Identity Service is working properly or not.</p>
 									<span id="dots"></span>
@@ -182,11 +184,11 @@
 									<h2>Summer Intern</h2>
 									<span class="position">Bosch Car Multimedia, Braga</span>
 									<p style="text-align: justify;">• Interacted with several types of engineers, such as informatical, electrical, and mechanical engineers. This allowed me to decide what I wanted to study and what I aspire to follow in the future. </p>
-									<span id="dots1"></span>
-									<span id="more1">
+									<span id="dotsBosch"></span>
+									<span id="moreBosch">
 										<p style="text-align: justifity;">• Improved some personal skills, like communication, project management, planning, and strategic thinking.</p>
 									</span>
-									<button onclick="showMore('dots1','more1','myBtn1')" id="myBtn1" class="btn py-1 px-1" >Read more</button>
+									<button onclick="showMore('dotsBosch','moreBosch','myBtnBosch')" id="myBtnBosch" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
@@ -273,7 +275,8 @@
 
 								<div class="text pl-3">
 									<span class="date">May 2021</span>
-									<h2>Tommy Hilfiger Fashion Frontier Challenge as Digital Judge</h2>
+									<h2>Digital Judge</h2>
+									<h3 class="position">Tommy Hilfiger Fashion Frontier Challenge </h3>
 									<span id="dotsTommy"> </span>
 									<span id="moreTommy">
 										<p style="text-align: justify;">THFCC is a global program to find and support the new ideas that are making the fashion landscape more inclusive. The three essential questions to evaluate these start-ups/projects were:</p>
@@ -294,11 +297,15 @@
 
 								<div class="text pl-3">
 									<span class="date">April 2020</span>
-									<h2>Pitch Bootcamp</h2>
-									<span class="position">Spark Agency.</span>
-									<p style="text-align: justifiy;">An enriching experience where I learned how to improve my presentation pitch. Besides, I also contacted directly with companies in order to clarify some questions, such as:</p>
-									<p>1. How are you being affected by this global pandemic?</p>
-									<p>2. Are recruitment processes normalized or reduced?</p>
+									<h2>Pitch Bootcamper</h2>
+									<h3 class="position">Spark Agency</h3>
+									<span id="dotsSpark"> </span>
+									<span id="moreSpark">
+										<p style="text-align: justifiy;">An enriching experience where I learned how to improve my presentation pitch. Besides, I also contacted directly with companies in order to clarify some questions, such as:</p>
+										<p>1. How are you being affected by this global pandemic?</p>
+										<p>2. Are recruitment processes normalized or reduced?</p>
+									</span>
+									<button onclick="showMore('dotsSpark','moreSpark','myBtnSpark')" id="myBtnSpark" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
@@ -313,7 +320,6 @@
 									<span class="date">October 2019</span>
 									<h2>GOOGLE</h2>
 									<span class="position">Dublin, Ireland</span>
-									<p>Visiting Google with 5 colleagues was such an unforgettable experience.</p>
 								</div>
 
 							</div>
@@ -327,8 +333,12 @@
 								<div class="text pl-3">
 									<span class="date">September 2019</span>
 									<h2>Bosch Connect Days</h2>
-									<span class="position">Bosch Portugal</span>
-									<p style="text-align: justify;">Bosch Connect Days motivated me to spend a day with an engineer in his work field. It was a great opportunity to understand the development and production areas of Bosch Portugal. Additionally, I also learned more about the industrial world.</p>
+									<h3 class="position">Bosch Car Multimedia, Braga</h3>
+									<span id="dotsBoschConnect"> </span>
+									<span id="moreBoschConnect">
+										<p style="text-align: justify;">Bosch Connect Days motivated me to spend a day with an engineer in his work field. It was a great opportunity to understand the development and production areas of Bosch Portugal. Additionally, I also learned more about the industrial world.</p>
+									</span>
+									<button onclick="showMore('dotsBoschConnect','moreBoschConnect','myBtnBoschConnect')" id="myBtnBoschConnect" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
@@ -342,15 +352,19 @@
 								<div class="text pl-3">
 									<span class="date">November 2015</span>
 									<h2>CERN</h2>
-									<span class="position">Geneva, Switzerland</span>
-									<p style="text-align: justify;">CERN, the European Organization for Nuclear Research, is one of the worlds's largest and most respected centres for scientific research. This visit motivated me to study engineering. Additionally, I also learned about the particle accelerator and its caracterisitics.</p>
+									<h3 class="position">Geneva, Switzerland</h3>
+									<span id="dotsCERN"> </span>
+									<span id="moreCERN">
+										<p style="text-align: justify;">CERN, the European Organization for Nuclear Research, is one of the worlds's largest and most respected centres for scientific research. This visit motivated me to study engineering. Additionally, I also learned about the particle accelerator and its caracterisitics.</p>
+									</span>
+									<button onclick="showMore('dotsCERN','moreCERN','myBtnCERN')" id="myBtnCERN" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
 
 						</div>
 
-						<!--PAGE 4 - Hackathons-->
+						<!--PAGE 4 - HACKATHONS-->
 						<div id="page-4" class= "page four">
 							<h2 class="heading">Hackathons</h2>
 
@@ -559,89 +573,8 @@
 
 							</div>
 
-							<!--PROGRAMMING SKILLS-->
-							<h4 class="heading">Programming Skills</h4>
-							<div class="row">
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>Python</h3>
-										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" aria-valuenow="80"
-											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>80%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>Java</h3>
-										<div class="progress">
-											<div class="progress-bar color-5" role="progressbar" aria-valuenow="75"
-											aria-valuemin="0" aria-valuemax="100" style="width:75%">
-											<span>75%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>C</h3>
-										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="75"
-											aria-valuemin="0" aria-valuemax="100" style="width:75%">
-											<span>75%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>SQL</h3>
-										<div class="progress">
-											<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>PHP</h3>
-										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-6 animate-box">
-									<div class="progress-wrap ftco-animate">
-										<h3>HTML5</h3>
-										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-
-						<!--LANGUAGES-->
-						<div id="page-7" class= "page seven">
-							<h2 class="heading">Languages</h2>
+							<!--COMMUNICATION SKILLS-->
+							<h4 class="heading">Communication</h4>
 							<div class="row">
 
 								<div class="col-md-6 animate-box">
@@ -678,6 +611,79 @@
 								</div>
 
 							</div>
+
+							<!--PROGRAMMING SKILLS-->
+							<h4 class="heading">Programming</h4>
+							<div class="row">
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>Python</h3>
+										<div class="progress">
+											<div class="progress-bar color-4" role="progressbar" aria-valuenow="80"
+											aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>Java</h3>
+										<div class="progress">
+											<div class="progress-bar color-5" role="progressbar" aria-valuenow="75"
+											aria-valuemin="0" aria-valuemax="100" style="width:75%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>C</h3>
+										<div class="progress">
+											<div class="progress-bar color-6" role="progressbar" aria-valuenow="75"
+											aria-valuemin="0" aria-valuemax="100" style="width:75%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>JavaScript</h3>
+										<div class="progress">
+											<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
+											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>HTML5</h3>
+										<div class="progress">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
+											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 animate-box">
+									<div class="progress-wrap ftco-animate">
+										<h3>SQL</h3>
+										<div class="progress">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
+											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
 						</div>
 
 					</div>
