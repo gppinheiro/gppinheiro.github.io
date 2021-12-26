@@ -35,6 +35,7 @@
 			#moreHB {display: none;}
 			#moreJSD {display: none;}
 			#moreNmbrs {display: none;}
+			#moreNmbrsSummer {display: none;}
 			#moreScout {display: none;}
 			#moreSpark {display: none;}
 			#moreSport {display: none;}
@@ -108,7 +109,7 @@
 							<div class="col-md-12 heading-section ftco-animate">
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
-								<p style="text-align: justify;">A final year Engineering student who is passionate about the evolution of technology and how engineers can change the world. I am a highly disciplined person with strategic thinking and a sensitive understanding of what is demand today from an engineer. This allows me to guide my performance with basic principles such as collaboration, organization, and teamwork. During my studies and the different internships, I developed even further a passion for motorsport, electric mobility, and programming. All in all, I can work in electronics and automation as well as informatics.</p>
+								<p style="text-align: justify;">A final year Engineering student who is passionate about the evolution of technology and how engineers can change the world. I am a highly disciplined person with strategic thinking and a sensitive understanding of what is demanded today from an engineer. This allows me to guide my performance with basic principles such as collaboration, organization, and teamwork. During my studies and the different internships, I developed even further a passion for motorsport, electric mobility, and programming. All in all, I can work in electronics and automation as well as informatics.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Name:</span> <span>Guilherme Pinheiro</span></li>
 									<li class="d-flex"><span>Date of birth:</span> <span>November 13, 1999</span></li>
@@ -162,12 +163,12 @@
 							
 								<div class="text pl-3">
 									<span class="date">September 2017-Present</span>
-									<h2>Integrated Master in Electrical and Computers Engineering</h2>
+									<h2>BEng + MEng, Electrical & Computers Engineering</h2>
 									<span class="position">FEUP - Faculdade De Engenharia Da Universidade Do Porto</span>
-									<p><u>Average:</u> 16</p>
+									<p><u>Average:</u> 16/20</p>
+									<p><u>Master:</u> Automation</p>
 									<p><u>Field of studies:</u> Electronics & Automation</p>
-									<p><u>Master:</u> Robotics & Systems</p>
-									<p><u>Courses:</u> Artificial Intelligence, Data Structures, Digital Control, Electronics, Industrial Automation, Microcontrollers, OOP in Java, Robotics</p>
+									<p><u>Courses:</u> Artificial Intelligence, Data Structures, Digital Control, Electronics, Industrial Automation, Microcontrollers, OOP in Java, Robotics.</p>
 								</div>
 
 							</div>
@@ -180,10 +181,10 @@
 							
 								<div class="text pl-3">
 									<span class="date">September 2021</span>
-									<h2>ESTiMATiON, CONTROL, OPTiMiSATiON AND DATA SCiENCE ‐ SUMMER COURSE</h2>
+									<h2>Summer Course, Estimation, Control, Optimisation and Data Science</h2>
 									<span class="position">SYSTEC & FEUP</span>
-									<p><u>Courses:</u> Machine Learning; Electric Mobility; Control and Robotics; Optimisation in Industrial Settings; Optimization; Converter Topologies for Network Connection; Topologies for Resonant Wireless Power Transfer; Electrical Power Quality; Protection, Automation, and Control Systems; Photovoltaic Systems</p>
-									<p><u>Reward:</u> One of 4 people that received a research grant</p>
+									<p><u>Courses:</u> Machine Learning; Electric Mobility; Control and Robotics; Optimisation in Industrial Settings; Optimization; Converter Topologies for Network Connection; Topologies for Resonant Wireless Power Transfer; Electrical Power Quality; Protection, Automation, and Control Systems; Photovoltaic Systems.</p>
+									<p><u>Reward:</u> One of 4 people that received a research grant.</p>
 								</div>
 
 							</div>
@@ -233,6 +234,14 @@
 									<span class="date">Sep 2021 - Present</span>
 									<h2>Quality Assurance Engineer</h2>
 									<span class="position">NMBRS, Lisbon</span>
+									<p style="text-align: justify;">• Developing a GMAIL API BOT to automate the process of receiving and analyzing the signals.</p>
+									<p style="text-align: justify;">• Developed automated tests with Selenium and Specflows, programmed them with C#/.Net language.</p>
+									<span id="dots"></span>
+									<span id="moreNmbrs">
+										<p style="text-align: justify;">• Built fully automated CI/CD pipelines on Microsoft Azure for applications using C#.</p>
+										<p style="text-align: justify;">• Use Jira Software to know the flow a certain ticket had and which ticket I can pick up next.</p>
+									</span>
+									<button onclick="showMore('dots','moreNmbrs','myBtnNmbrs')" id="myBtnNmbrs" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
@@ -250,13 +259,13 @@
 									<p style="text-align: justify;">• Designed a WebApp to know the NMBRS’s REST API and OAuth 2.0 flow.</p>
 									<p style="text-align: justify;">• Developed automated tests with Selenium to know if the Identity Service is working properly or not.</p>
 									<span id="dots"></span>
-									<span id="moreNmbrs">
+									<span id="moreNmbrsSummer">
 										<p style="text-align: justify;">• Implemented several API tests in Postman to know if an endpoint has any errors.</p>
 										<p style="text-align: justify;">• Implemented several API performance tests in k6 to know if any feature or upgrade improved or not the REST API.</p>
 										<p style="text-align: justify;">• Built fully automated CI/CD pipelines on Microsoft Azure for applications using JavaScript, k6, Python, Selenium. </p>
 										<p style="text-align: justify;">• Helped the Integrations Squad testing and closing tickets (on Jira Software).</p>
 									</span>
-									<button onclick="showMore('dots','moreNmbrs','myBtn')" id="myBtn" class="btn py-1 px-1" >Read more</button>
+									<button onclick="showMore('dots','moreNmbrsSummer','myBtnNmbrsSummer')" id="myBtnNmbrsSummer" class="btn py-1 px-1" >Read more</button>
 								</div>
 
 							</div>
@@ -738,8 +747,8 @@
 									<div class="progress-wrap ftco-animate">
 										<h3>JavaScript</h3>
 										<div class="progress">
-											<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
 											</div>
 										</div>
 									</div>
@@ -747,10 +756,10 @@
 
 								<div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>HTML5</h3>
+										<h3>C# / .Net</h3>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
 											</div>
 										</div>
 									</div>
@@ -758,7 +767,7 @@
 
 								<div class="col-md-6 animate-box">
 									<div class="progress-wrap ftco-animate">
-										<h3>SQL</h3>
+										<h3>HTML5, CSS, PHP + PostgreSQL</h3>
 										<div class="progress">
 											<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
 											aria-valuemin="0" aria-valuemax="100" style="width:50%">
