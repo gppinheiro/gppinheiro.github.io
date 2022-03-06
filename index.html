@@ -40,6 +40,7 @@
 			#moreSpark {display: none;}
 			#moreSport {display: none;}
 			#moreTommy {display: none;}
+			#moreOfferZen {display: none;}
 		</style>
 	</head>
 
@@ -231,10 +232,10 @@
 								</div>
 
 								<div class="text pl-3">
-									<span class="date">Sep 2021 - Present</span>
+									<span class="date">Sep 2021 - Feb 2022</span>
 									<h2>Quality Assurance Engineer</h2>
 									<span class="position">NMBRS, Lisbon</span>
-									<p style="text-align: justify;">• Developing a GMAIL API BOT to automate the process of receiving and analyzing the signals.</p>
+									<p style="text-align: justify;">• Developed a GMAIL API BOT to automate the process of receiving and analyzing the signals.</p>
 									<p style="text-align: justify;">• Developed automated tests with Selenium and Specflows, programmed them with C#/.Net language.</p>
 									<span id="dots"></span>
 									<span id="moreNmbrs">
@@ -256,6 +257,7 @@
 									<span class="date">Jul 2021 - Aug 2021</span>
 									<h2>Quality Assurance Summer Intern</h2>
 									<span class="position">NMBRS, Lisbon</span>
+									<p style="text-align: justify;"><a href="https://medium.com/nmbrs-tech-blog/how-i-used-pytest-to-write-qa-tests-that-securely-bypass-2fa-c11b78325bb7">Project Link</a></p>
 									<p style="text-align: justify;">• Designed a WebApp to know the NMBRS’s REST API and OAuth 2.0 flow.</p>
 									<p style="text-align: justify;">• Developed automated tests with Selenium to know if the Identity Service is working properly or not.</p>
 									<span id="dots"></span>
@@ -317,6 +319,25 @@
                                 </div>
 
                                 <div class="text pl-3">
+                                    <span class="date">Oct 2021 - Present</span>
+                                    <h2>Writer</h2>
+                                    <h3 class="position">OfferZen</h3>
+									<span id="dotsOfferZen"></span>
+									<span id="moreOfferZen">
+                                    	<p style="text-align: justify;"><a href="https://www.offerzen.com/blog/how-i-used-pytest-to-write-qa-tests-that-securely-bypass-2fa">First Article</a></p>
+									</span>
+									<button onclick="showMore('dotsOfferZen','moreOfferZen','myBtnOfferZen')" id="myBtnOfferZen" class="btn py-1 px-1" >Read more</button>
+                                </div>
+
+                            </div>
+
+							<div class="resume-wrap d-flex ftco-animate">
+
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="flaticon-analysis"></span>
+                                </div>
+
+                                <div class="text pl-3">
                                     <span class="date">Sep 2021 - Present</span>
                                     <h2>Electronics & Software Department Member</h2>
                                     <h3 class="position">Formula Student FEUP</h3>
@@ -325,6 +346,26 @@
                                     	<p style="text-align: justify;">First year that our university is competing in Formula Student. I'm one of the chosen to grow and help the team to develop the first FEUP's electric formula racing car. My work in the department is related to study and develop a Battery Pack and a Battery Management System (BMS).</p>
 									</span>
 									<button onclick="showMore('dotsFS','moreFS','myBtnFS')" id="myBtnFS" class="btn py-1 px-1" >Read more</button>
+                                </div>
+
+                            </div>
+
+
+							<div class="resume-wrap d-flex ftco-animate">
+
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="flaticon-ux-design"></span>
+                                </div>
+
+                                <div class="text pl-3">
+                                    <span class="date">Feb 2021 - Present</span>
+                                    <h2>Secretary‐General</h2>
+                                    <h3 class="position">Political Core</h3>
+									<span id="dotsJSD"></span>
+									<span id="moreJSD">
+                                    	<p style="text-align: justify;">Gained expertise in political fields and, especially about how to improve the citizens lifestyle.</p>
+									</span>
+									<button onclick="showMore('dotsJSD','moreJSD','myBtnJSD')" id="myBtnJSD" class="btn py-1 px-1" >Read more</button>
                                 </div>
 
                             </div>
@@ -347,25 +388,6 @@
                                     	Find more about us at our: <a href="https://www.linkedin.com/company/hungerbyte">LinkedIN Page</a> .</p>
 									</span>
 									<button onclick="showMore('dotsHB','moreHB','myBtnHB')" id="myBtnHB" class="btn py-1 px-1" >Read more</button>
-                                </div>
-
-                            </div>
-
-							<div class="resume-wrap d-flex ftco-animate">
-
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-ux-design"></span>
-                                </div>
-
-                                <div class="text pl-3">
-                                    <span class="date">Feb 2021 - Present</span>
-                                    <h2>Secretary‐General</h2>
-                                    <h3 class="position">Political Core</h3>
-									<span id="dotsJSD"></span>
-									<span id="moreJSD">
-                                    	<p style="text-align: justify;">Gained expertise in political fields and, especially about how to improve the citizens lifestyle.</p>
-									</span>
-									<button onclick="showMore('dotsJSD','moreJSD','myBtnJSD')" id="myBtnJSD" class="btn py-1 px-1" >Read more</button>
                                 </div>
 
                             </div>
@@ -799,6 +821,7 @@
 					<div class="button-group text-center">
 						<button type="button" class="active" id="btn1" data-filter="*">All</button>
 						<button type="button" data-filter=".latest">Latest</button>
+						<button type="button" data-filter=".work">Work</button>
 						<button type="button" data-filter=".personal">Personal</button>
 						<button type="button" data-filter=".uni">University</button>
 						<button type="button" data-filter=".others">Others</button>
@@ -808,6 +831,20 @@
 
 				<!--IMAGES-->
                 <div class="row grid">
+
+					<div class="col-lg-4 col-md-6 col-sm-12 element-item work latest">
+                        <div class="our-project">
+							<a href="https://medium.com/nmbrs-tech-blog/how-i-used-pytest-to-write-qa-tests-that-securely-bypass-2fa-c11b78325bb7">
+								<div class="img">
+									<img src="images/summer_internship_nmbrs.png" class="img-fluid">
+								</div>
+								<div class="title py-4">
+									<h4 style="font-family: sans-serif;" class="text-uppercase">Bypass 2FA Automated Test</h4>
+									<span class="text-secondary">Work Project, NMBRS</span>
+								</div>
+							</a>
+                        </div>
+                    </div>
 
 					<div class="col-lg-4 col-md-6 col-sm-12 element-item uni latest">
                         <div class="our-project">
