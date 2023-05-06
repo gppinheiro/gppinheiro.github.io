@@ -1,0 +1,20 @@
+{
+  "name": "gppinheiro.github.io",
+  "version": "0.1.0",
+  "author": "Guilherme Pinheiro",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-qunit": "*",
+    "grunt-contrib-uglify": "*",
+    "matchdep": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "description": ""
+}
