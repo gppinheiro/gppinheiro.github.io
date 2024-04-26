@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples</title>
+    <link rel="stylesheet" href="./custom-elements/modules.css">
+    <script type="module" src="./custom-elements/modules.js"></script>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        #icons {
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="typographys">
+        <custom-typography type="h1" weight="extra-bold">Typography</custom-typography>
+        <custom-typography type="title">Title</custom-typography>
+        <custom-typography type="h1">Heading 1</custom-typography>
+        <custom-typography type="h2" weight="bold">Heading 2</custom-typography>
+        <custom-typography type="h3" weight="semi-bold">Heading 3</custom-typography>
+        <custom-typography type="p">Paragraph Text</custom-typography>
+    </div>
+
+    <div id="inputs">
+        <custom-typography type="h1" weight="extra-bold">Input</custom-typography>
+        <custom-typography type="h3">Default</custom-typography>
+        <custom-input></custom-input>
+        <custom-typography type="h3">Error</custom-typography>
+        <custom-input status="error"></custom-input>
+        <custom-typography type="h3">Disabled</custom-typography>
+        <custom-input status="disabled"></custom-input>
+        <custom-typography type="h3">Text Area</custom-typography>
+        <custom-input type="textarea"></custom-input>
+        <custom-typography type="h3">Text Area Error</custom-typography>
+        <custom-input type="textarea" status="error"></custom-input>
+        <custom-typography type="h3">Text Area Disabled</custom-typography>
+        <custom-input type="textarea" status="disabled"></custom-input>
+    </div>
+
+    <div id="icons">
+        <custom-typography type="h1" weight="extra-bold">Icon</custom-typography>
+        <custom-icon size="s">grade</custom-icon>
+        <custom-icon size="m">grade</custom-icon>
+        <custom-icon size="l">grade</custom-icon>
+        <custom-icon size="xl">grade</custom-icon>
+        <custom-icon size="s" img="./assets/google.svg"></custom-icon>
+        <custom-icon size="m" img="./assets/google.svg"></custom-icon>
+        <custom-icon size="l" img="./assets/google.svg"></custom-icon>
+        <custom-icon size="xl" img="./assets/google.svg"></custom-icon>
+    </div>
+
+    <div id="buttons">
+        <custom-typography type="h1" weight="extra-bold">Button</custom-typography>
+        <custom-typography type="h3">Medium</custom-typography>
+        <custom-button icon="download" text="CV"></custom-button>
+        <custom-typography type="h3">Large</custom-typography>
+        <custom-button icon="download" text="CV" size="l"></custom-button>
+        <custom-typography type="h3">Only Text</custom-typography>
+        <custom-button text="CV" size="l"></custom-button>
+        <custom-typography type="h3">Only Icon</custom-typography>
+        <custom-button icon="download" size="l"></custom-button>
+        <custom-typography type="h3">Light Version</custom-typography>
+        <custom-button icon="download" size="l" mode="light" text="Download"></custom-button>
+        <custom-typography type="h3">Light Version With SVG</custom-typography>
+        <custom-button icon="./assets/google.svg" size="l" mode="light" text="Download"></custom-button>
+    </div>
+
+    <div id="logo">
+        <custom-typography type="h1" weight="extra-bold">Logo</custom-typography>
+        <custom-logo></custom-logo>
+    </div>
+
+    <div id="a">
+        <custom-typography type="h1" weight="extra-bold">Link</custom-typography>
+        <custom-a href="https://www.google.com">Google</custom-a>
+    </div>
+
+    <div id="experience">
+        <custom-typography type="h1" weight="extra-bold">Experience</custom-typography>
+        <custom-typography type="h3">Light</custom-typography>
+        <custom-experience
+            logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
+            title="Software Engineer at Nmbrs"
+            date="Aug. 2022 - Present"
+        >
+            As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.
+        </custom-experience>
+        <custom-typography type="h3">Dark</custom-typography>
+        <custom-experience
+            mode="dark" 
+            logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
+            title="Software Engineer at Nmbrs"
+            date="Aug. 2022 - Present"
+        >
+            As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.
+        </custom-experience>
+    </div>
+
+    <div id="project">
+        <custom-typography type="h1" weight="extra-bold">Project</custom-typography>
+        <custom-typography type="h3">Right</custom-typography>
+        <custom-project
+            setImage="right"
+            number="1"
+            imageUrl="./../assets/guilherme.jpeg"
+            title="Guilherme's Website"
+            goLinkUrl="#"
+        >
+            A personal website to showcase my projects and experiences.
+        </custom-project>
+        <custom-typography type="h3">Left</custom-typography>
+        <custom-project
+            setImage="left"
+            number="2"
+            imageUrl="./../assets/guilherme.jpeg"
+            title="Guilherme's Website"
+            goLinkUrl="#"
+        >
+            A personal website to showcase my projects and experiences.
+        </custom-project>
+    </div>
+</body>
+</html>

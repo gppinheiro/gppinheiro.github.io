@@ -1,0 +1,19 @@
+footer {
+    padding: 2% 5%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer custom-typography {
+    color: var(--white);
+    text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        gap: 16px;
+    }
+}

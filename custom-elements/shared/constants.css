@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
+:root {
+    /* Colors */
+    --text: #18181B;
+    --black: #000000;
+    --neutral: #404040;
+    --white: #FFFFFF;
+    --zinc-100: #F4F4F5;
+    --zinc-200: #E4E4E7;
+    --zinc-300: #D4D4D8;
+    --zinc-500: #71717A;
+    --zinc-800: #27272A;
+    --error: #EF4444;
+
+    /* Typography */
+    --font-family: 'Open Sans', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+    --font-size-title: 48px;
+    --font-size-h1: 36px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-p: 20px;
+    --font-size-label: 16px;
+    --line-height-title: 56px;
+    --line-height-h1: 44px;
+    --line-height-h2: 40px;
+    --line-height-h3: 32px;
+    --line-height-p: 24px;
+    --line-height-label: 20px;
+
+    /* Size */
+    --font-size-s: 16px;
+    --font-size-m: 20px;
+    --font-size-l: 24px;
+    --font-size-xl: 32px;
+}
+
+@media screen and (max-width: 768px){
+    :root {
+        --font-size-title: 28px;
+        --font-size-h2: 24px;
+        --font-size-h3: 20px;
+        --font-size-p: 16px;
+        --font-size-label: 12px;
+
+        --line-height-title: 32px;
+        --line-height-h2: 24px;
+    }
+
+}

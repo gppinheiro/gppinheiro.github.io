@@ -1,0 +1,68 @@
+@import './../typography/typography.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 28px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    flex-grow: 1;
+}
+
+.dark {
+    background-color: var(--black);
+    border-color: var(--zinc-500);
+}
+
+.light {
+    background-color: var(--zinc-800);
+    border-color: var(--zinc-800);
+}
+
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .header .role {
+    display: flex;
+    align-items: center;
+    gap: 28px;    
+}
+
+.container .header .role img {
+    width: 32px;
+    height: 32px;
+}
+
+.container .header .date {
+    justify-self: flex-end;
+}
+
+.container .header custom-typography[type='label'] {
+    text-align: right;
+    margin-left: auto;
+    color: var(--zinc-300);
+}
+
+.header custom-typography[type='h3'] {
+    color: var(--white);
+}
+
+custom-typography {
+    color: var(--zinc-300);
+}
+
+@media screen and (max-width: 768px) {
+    .container .header {
+        flex-direction: column;
+        gap: 28px;
+        align-items: unset;
+    }
+
+    .container .header .date {
+        justify-self: flex-start;
+    }
+}

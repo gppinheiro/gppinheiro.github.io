@@ -1,0 +1,17 @@
+@import './../typography/typography.css';
+
+a {
+    text-decoration: none;
+}
+
+a custom-typography {
+    color: var(--black);
+}
+
+a:hover custom-typography {
+    color: var(--neutral);
+}
+
+a custom-icon {
+    color: var(--white);
+}

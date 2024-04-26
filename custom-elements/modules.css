@@ -1,0 +1,10 @@
+@import './shared/constants.css';
+@import './typography/typography.css';
+
+custom-icon {
+    color: var(--black);
+}
+
+custom-icon:hover {
+    color: var(--neutral);
+}

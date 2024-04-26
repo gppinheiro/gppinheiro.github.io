@@ -1,0 +1,47 @@
+custom-typography {
+    font-family: var(--font-family);
+    color: var(--text);
+    font-weight: var(--font-weight-regular);
+}
+
+custom-typography[type='title'] {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-title);
+}
+
+custom-typography[type='h1'] {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+}
+
+custom-typography[type='h2'] {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+}
+
+custom-typography[type='h3'] {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+}
+
+custom-typography[type='p'] {
+    font-size: var(--font-size-p);
+    line-height: var(--line-height-p);
+}
+
+custom-typography[type='label'] {
+    font-size: var(--font-size-label);
+    line-height: var(--line-height-label);
+}
+
+custom-typography[weight='extra-bold'] {
+    font-weight: var(--font-weight-extra-bold);
+}
+
+custom-typography[weight='bold'] {
+    font-weight: var(--font-weight-bold);
+}
+
+custom-typography[weight='semi-bold'] {
+    font-weight: var(--font-weight-semi-bold);
+}

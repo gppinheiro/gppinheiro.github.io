@@ -1,0 +1,31 @@
+.cards {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.cards custom-experience {
+    width: 100%;
+}
+
+.cards custom-typography[type="title"] {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.cards.light {
+    background-color: unset;
+}
+
+.cards.light custom-typography[type="title"] {
+    color: var(--black);
+}
+
+.cards ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+@import './about-me.css';
+@import './cards.css';
+@import './contact-me.css';
+@import './footer.css';
+@import './header.css';
+@import './intro.css';
+@import './../custom-elements/modules.css';
+
+body {
+  margin:0;
+  background-color: var(--white);
+}
+
+section {
+  padding: 6% 10%;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Pinheiro</title>
+    <link rel="icon" href="./assets/guilherme.ico">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <header>
+        <custom-logo onclick="goTo('./index.html', false)"></custom-logo>
+        <div id="menu">
+            <custom-a href="./index.html">Home</custom-a>
+            <custom-a href="./index.html#projects">Projects</custom-a>
+            <custom-a href="#contact-me">Contact Me</custom-a>
+        </div>
+        <custom-button id="button-cv" icon="download" size="m" text="CV"></custom-button>
+        <div id="burger-menu">
+            <custom-icon size="xl">menu</custom-icon>
+        </div>
+        <div id="burger-menu-content">
+            <custom-a href="./index.html">Home</custom-a>
+            <custom-a href="./index.html#projects">Projects</custom-a>
+            <custom-a href="#contact-me">Contact Me</custom-a>
+            <custom-button icon="download" size="m" text="CV"></custom-button>
+        </div>
+    </header>
+
+    <section id="about-me">
+        <div id="about-me-image">
+            <img src="./assets/guilherme.jpeg">
+        </div>
+        <div id="about-me-text">
+            <div id="about-me-title">
+                <custom-typography type="title">About </custom-typography>
+                <custom-typography type="title" weight="extra-bold">Me</custom-typography>
+            </div>
+            <custom-typography type="p">I'm Guilherme Pinheiro, an engineer driven by the desire to make impact through technology. My journey in engineering is fueled by a deep-seated passion for innovation and the transformative role engineers play in shaping the future. I approach every challenge with a strategic mindset to deliver solutions out of the box.</custom-typography>
+            <custom-typography type="p">I pride myself on fostering environments where collaboration and determination thrive. I believe that the best results stem from a proactive approach and the ability to adapt and grow amidst the ever-evolving technological landscape. My career is a testament to pushing boundaries and striving for excellence in every project I undertake.</custom-typography>
+            <custom-typography type="p">When I'm not engrossed in my professional projects, you'll find me immersed in the world of sports and books. I'm also an avid learner, constantly engaged in side projects that broaden my knowledge and skills. These projects not only satisfy my curiosity but also enhance my professional capabilities, ensuring that I am always at the cutting edge of my field.</custom-typography>
+        </div>
+    </section>
+
+    <section id="experience" class="cards">
+        <custom-typography type="title" weight="extra-bold">Experience</custom-typography>
+        <custom-experience
+            logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
+            title="Scrum Master at Nmbrs"
+            date="Sep. 2022 - Present"
+        >
+            <ul>
+                <li>Lead two dynamic teams: the Frontend Chapter and Infrastructure, fostering a culture of collaboration and accountability across multicultural team members.</li>
+                <li>Champion Agile principles and practices within the organization, leveraging Professional Scrum Master Level I and II certifications to guide teams in implementing Scrum methodologies effectively.</li>
+                <li>Use JIRA as my project management tool.</li>
+            </ul>
+        </custom-experience>
+        <custom-experience
+            mode="light"
+            logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
+            title="Software Engineer at Nmbrs"
+            date="Aug. 2022 - Present"
+        >
+            <ul>
+                <li>Develop and maintain features for both microservices and monolithic architectures, enhancing functionality and user experience across the platform.</li>
+                <li>Transitioned from a product-focused team to the Core team, contributing to the enhancement of core technical capabilities and ensuring the development of robust and scalable software solutions.</li>
+                <li>Engineered the creation of the Dutch Payroll Assistant from scratch, delivering a tailored solution that help our customers to get answers quickly.</li>
+                <li>Utilize .NET and JavaScript as primary programming languages, and employ Azure DevOps for CI/CD.</li>
+            </ul>
+        </custom-experience>
+        <custom-experience
+            logoUrl="https://ltplabs.com/wp-content/themes/waiweb-ltp/img/logo.svg"
+            title="Junior Businees Analyst at LTPlabs"
+            date="Feb. 2022 - Jul. 2022"
+        >
+            <ul>
+                <li>Designed and implemented two advanced optimization models using Python, SQL, and CPLEX: one for dynamic time and mileage pricing and fleet planning, and another for strategic vehicle repositioning.</li>
+                <li>Developed user-friendly interfaces in VBA Excel to facilitate real-time data analysis and decision-making for non-technical users.</li>
+                <li>Analyzed large datasets to identify trends and provide actionable insights, leading to more informed strategic decisions and improved operational efficiency.</li>
+                <li>Collaborated closely with client stakeholders through daily interactions to gather requirements and align project objectives with business goals.</li>
+            </ul>
+        </custom-experience>
+        <custom-experience
+            mode="light"
+            logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
+            title="Quality Assurance at Nmbrs"
+            date="Jul. 2021 - Feb. 2022"
+        >
+            <ul>
+                <li>Designed a WebApp to demonstrate proficiency with NMBRS's REST API and OAuth 2.0, enhancing external system integrations.</li>
+                <li>Developed and implemented automated testing frameworks using Selenium and Specflows in C#/.Net, improving system reliability and functionality.</li>
+                <li>Conducted API and performance tests using Postman and k6 to optimize and ensure the accuracy and efficiency of the NMBRS's REST API.</li>
+            </ul>
+        </custom-experience>
+    </section>
+
+    <section id="education" class="cards light">
+        <custom-typography type="title" weight="extra-bold">Education</custom-typography>
+        <custom-experience
+            mode="light"
+            logoUrl="./assets/feup.jpeg"
+            title="BEng + MEng, Electrical & Computers Engineering at FEUP"
+            date="Jul. 2017 - Jul. 2022"
+        >   
+            <ul>
+                <li>Graduated with an A.</li>
+                <li>Field of studies: Electronics & Automation.</li>
+                <li>Courses: Artificial Intelligence, Data Structures, Digital Control, Electronics, Industrial Automation, Enterprise Information Systems, Microcontrollers, OOP in Java, Operations Management, Operations Research, Perception and Mapping, Robotics, and Systems Engineering.</li>
+                <li>Master's Thesis Title: "Analytical Revenue Management in a Car Rental Company".</li>
+                <li>Master's Thesis Grade: 19 / 20.</li>
+                <li>Master's Thesis Project: The Rental Revenue Management project aimed to implement a revenue management system based on the capacity of each station and its fleet availability and booking evolution in Portugal. The project was developed in LTPlabs. The car rental company in question is one of LTP's clients.</li>
+            </ul>
+        </custom-experience>
+    </section>
+
+    <section id="contact-me">
+        <div id="contact-form">
+            <custom-input id="contact-name" type="text" placeholder="Name"></custom-input>
+            <custom-input id="contact-email" type="email" placeholder="Email"></custom-input>
+            <custom-input id="contact-company" type="text" placeholder="Company"></custom-input>
+            <custom-input id="contact-message" type="textarea" placeholder="Write your message here."></custom-input>
+            <div id="contact-buttons">
+                <custom-button size="m" text="Get In Touch" onclick="sendMessage()"></custom-button>
+                <div id="contact-media">
+                    <custom-button icon="./assets/google.svg" size="m" mode="light" onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
+                    <custom-button icon="./assets/linkedin.svg" size="m" mode="light" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
+                    <custom-button icon="./assets/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-text">
+            <custom-typography type="title" weight="extra-bold">Get in touch with me</custom-typography>
+            <custom-typography type="p">Feel free to reach out if you're interested in exploring new projects together!</custom-typography>
+            <div id="contact-info">
+                <custom-typography type="h3" weight="semi-bold" onclick="goTo('mailto:pinheiropgui@gmail.com', false)">pinheiropgui@gmail.com</custom-typography>
+                <custom-typography type="h3" weight="semi-bold" onclick="goTo('tel:+351938400164', false)">(+351) 938400164</custom-typography>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <custom-logo mode="light" onclick="goTo('./index.html', false)"></custom-logo>
+        <custom-typography type="label">© 2024, Guilherme Pinheiro. All rights reserved.</custom-typography>
+    </footer>
+
+</body>
+
+</html>

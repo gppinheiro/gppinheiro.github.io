@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.material-icons.s {
+    font-size: var(--font-size-s);
+    line-height: var(--font-size-s);
+}
+
+.material-icons.m {
+    font-size: var(--font-size-m);
+    line-height: var(--font-size-m);
+}
+
+.material-icons.l {
+    font-size: var(--font-size-l);
+    line-height: var(--font-size-l);
+}
+
+.material-icons.xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--font-size-xl);
+}
+
+.i.material-icons:focus,
+.i.material-icons:focus-visible {
+    background-color: unset;
+    outline: none;
+}
+
+img.s {
+    width: var(--font-size-s);
+    height: var(--font-size-s);
+}
+
+img.m {
+    width: var(--font-size-m);
+    height: var(--font-size-m);
+}
+
+img.l {
+    width: var(--font-size-l);
+    height: var(--font-size-l);
+}
+
+img.xl {
+    width: var(--font-size-xl);
+    height: var(--font-size-xl);
+}

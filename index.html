@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Pinheiro</title>
+    <link rel="icon" href="./assets/guilherme.ico">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <header>
+        <custom-logo></custom-logo>
+        <div id="menu">
+            <custom-a href="./about-me.html">About Me</custom-a>
+            <custom-a href="#projects">Projects</custom-a>
+            <custom-a href="#contact-me">Contact Me</custom-a>
+        </div>
+        <custom-button id="button-cv" icon="download" size="m" text="CV"></custom-button>
+        <div id="burger-menu">
+            <custom-icon size="xl">menu</custom-icon>
+        </div>
+        <div id="burger-menu-content">
+            <custom-a href="./about-me.html">About Me</custom-a>
+            <custom-a href="#projects">Projects</custom-a>
+            <custom-a href="#contact-me">Contact Me</custom-a>
+            <custom-button icon="download" size="m" text="CV"></custom-button>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div id="intro-content">
+            <div id="intro-titles">
+                <div id="intro-name">
+                    <custom-typography type="title">Hello I'm </custom-typography>
+                    <custom-typography type="title" weight="extra-bold">Guilherme Pinheiro.</custom-typography>
+                </div>
+                <div id="intro-job">
+                    <custom-typography type="title" weight="extra-bold">Full Stack Software Engineer.</custom-typography>
+                </div>
+                <div id="intro-country">
+                    <custom-typography type="title">Based In </custom-typography>
+                    <custom-typography type="title" weight="extra-bold">Portugal.</custom-typography>
+                </div>
+            </div>
+            <custom-typography type="p">I'm an energetic and enthusiastic engineer with a deep passion for the evolution of technology and the profound impact engineers can have on the world. My engineering approach is rooted in strategic thinking and a keen understanding of the demands of today's technological landscape. I guide my performance with essential principles such as collaboration, determination, and proactivity. Outside of my professional life, I am a devoted sports lover and I always engage in side projects or in a book to expand my knowledge and skills.</custom-typography>
+            <div id="intro-media">
+                <custom-button icon="./assets/google.svg" size="m" mode="light"></custom-button>
+                <custom-button icon="./assets/linkedin.svg" size="m" mode="light"></custom-button>
+                <custom-button icon="./assets/github.svg" size="m" mode="light"></custom-button>
+            </div>
+        </div>
+        <img src="./assets/guilherme.jpeg">
+    </section>
+
+    <section id="projects" class="cards">
+        <custom-typography type="title" weight="extra-bold">Projects</custom-typography>
+        <custom-project
+            setImage="right"
+            number="1"
+            imageUrl="./assets/projects/project_01.png"
+            title="Guilherme's Website"
+            goLinkUrl="#"
+        >
+            A personal website to showcase my projects and experiences.
+        </custom-project>
+    </section>
+
+    <section id="contact-me">
+        <div id="contact-form">
+            <custom-input id="contact-name" type="text" placeholder="Name"></custom-input>
+            <custom-input id="contact-email" type="email" placeholder="Email"></custom-input>
+            <custom-input id="contact-company" type="text" placeholder="Company"></custom-input>
+            <custom-input id="contact-message" type="textarea" placeholder="Write your message here."></custom-input>
+            <div id="contact-buttons">
+                <custom-button size="m" text="Get In Touch" onclick="sendMessage()"></custom-button>
+                <div id="contact-media">
+                    <custom-button icon="./assets/google.svg" size="m" mode="light" onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
+                    <custom-button icon="./assets/linkedin.svg" size="m" mode="light" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
+                    <custom-button icon="./assets/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-text">
+            <custom-typography type="title" weight="extra-bold">Get in touch with me</custom-typography>
+            <custom-typography type="p">Feel free to reach out if you're interested in exploring new projects together!</custom-typography>
+            <div id="contact-info">
+                <custom-typography type="h3" weight="semi-bold" onclick="goTo('mailto:pinheiropgui@gmail.com', false)">pinheiropgui@gmail.com</custom-typography>
+                <custom-typography type="h3" weight="semi-bold" onclick="goTo('tel:+351938400164', false)">(+351) 938400164</custom-typography>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <custom-logo mode="light"></custom-logo>
+        <custom-typography type="label">© 2024, Guilherme Pinheiro. All rights reserved.</custom-typography>
+    </footer>
+
+</body>
+
+</html>
