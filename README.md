@@ -7,3 +7,5 @@ Extra Large: ≥1200px
 Extra Extra Large: ≥1400px
 
 Design: https://www.figma.com/file/v1caHhXep3JAx7aR8R28WM/Guilherme's-Portfolio?type=design&node-id=618-640&mode=design&t=FmuLBfN2Zav05hQ7-0
+
+The custom domain is guilhermepinheiro.me, and it was purchased in GoDaddy.
