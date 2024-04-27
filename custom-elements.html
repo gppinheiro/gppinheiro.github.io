@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examples</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./custom-elements/modules.css">
     <script type="module" src="./custom-elements/modules.js"></script>
 
@@ -23,6 +24,13 @@
 
         #icons {
             flex-direction: row;
+        }
+
+        .tool {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
         }
     </style>
 </head>
@@ -59,10 +67,10 @@
         <custom-icon size="m">grade</custom-icon>
         <custom-icon size="l">grade</custom-icon>
         <custom-icon size="xl">grade</custom-icon>
-        <custom-icon size="s" img="./assets/google.svg"></custom-icon>
-        <custom-icon size="m" img="./assets/google.svg"></custom-icon>
-        <custom-icon size="l" img="./assets/google.svg"></custom-icon>
-        <custom-icon size="xl" img="./assets/google.svg"></custom-icon>
+        <custom-icon size="s" img="./assets/icons/google.svg"></custom-icon>
+        <custom-icon size="m" img="./assets/icons/google.svg"></custom-icon>
+        <custom-icon size="l" img="./assets/icons/google.svg"></custom-icon>
+        <custom-icon size="xl" img="./assets/icons/google.svg"></custom-icon>
     </div>
 
     <div id="buttons">
@@ -116,16 +124,32 @@
         <custom-typography type="h1" weight="extra-bold">Project</custom-typography>
         <custom-typography type="h3">Right</custom-typography>
         <custom-project
+            id="project-01"
             setImage="right"
             number="1"
             imageUrl="./../assets/guilherme.jpeg"
             title="Guilherme's Website"
-            goLinkUrl="#"
         >
             A personal website to showcase my projects and experiences.
         </custom-project>
+        <custom-project-popup id="popup-project-01">
+            <custom-typography slot="project-links" type="p">
+                Link: <custom-a href="https://www.google.com">Google</custom-a>
+            </custom-typography>
+            <custom-typography slot="project-links" type="p">
+                Developed By: <custom-a href="https://www.google.com">Google</custom-a>
+            </custom-typography>
+
+            <span slot="project-tools" class="tool">
+                <custom-icon size="xl">grade</custom-icon>
+                <custom-typography type="p">HTML</custom-typography>
+            </span>
+
+            <custom-typography slot="project-description" type="p">A personal website to showcase my projects and experiences.</custom-typography>
+        </custom-project-popup>
         <custom-typography type="h3">Left</custom-typography>
         <custom-project
+            id="project-02"
             setImage="left"
             number="2"
             imageUrl="./../assets/guilherme.jpeg"

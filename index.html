@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Pinheiro</title>
-    <link rel="icon" href="./assets/guilherme.ico">
+    <link rel="icon" href="./assets/icons/guilherme.ico">
 
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -50,9 +50,9 @@
             </div>
             <custom-typography type="p">I'm an energetic and enthusiastic engineer with a deep passion for the evolution of technology and the profound impact engineers can have on the world. My engineering approach is rooted in strategic thinking and a keen understanding of the demands of today's technological landscape. I guide my performance with essential principles such as collaboration, determination, and proactivity. Outside of my professional life, I am a devoted sports lover and I always engage in side projects or in a book to expand my knowledge and skills.</custom-typography>
             <div id="intro-media">
-                <custom-button icon="./assets/google.svg" size="m" mode="light"></custom-button>
-                <custom-button icon="./assets/linkedin.svg" size="m" mode="light"></custom-button>
-                <custom-button icon="./assets/github.svg" size="m" mode="light"></custom-button>
+                <custom-button icon="./assets/icons/google.svg" size="m" mode="light" onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
+                <custom-button icon="./assets/icons/linkedin.svg" size="m" mode="light" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
+                <custom-button icon="./assets/icons/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
             </div>
         </div>
         <img src="./assets/guilherme.jpeg">
@@ -60,15 +60,60 @@
 
     <section id="projects" class="cards">
         <custom-typography type="title" weight="extra-bold">Projects</custom-typography>
+
         <custom-project
+            id="project-01"
             setImage="right"
             number="1"
             imageUrl="./assets/projects/project_01.png"
             title="Guilherme's Website"
-            goLinkUrl="#"
         >
             A personal website to showcase my projects and experiences.
         </custom-project>
+        <custom-project-popup id="popup-project-01" projectName="Guilherme's Website">
+            <custom-typography slot="project-links" type="p">
+                Link: <custom-a href="">Website</custom-a>
+            </custom-typography>
+            <custom-typography slot="project-links" type="p">
+                Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
+            </custom-typography>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/css.svg"></custom-icon>
+                <custom-typography type="label">CSS</custom-typography>
+            </span>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
+                <custom-typography type="label">Figma</custom-typography>
+            </span>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
+                <custom-typography type="label">Git</custom-typography>
+            </span>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                <custom-typography type="label">Github</custom-typography>
+            </span>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/html.svg"></custom-icon>
+                <custom-typography type="label">HTML</custom-typography>
+            </span>
+
+            <span slot="project-tools" class="project-tool">
+                <custom-icon size="xl" img="./assets/icons/javascript.svg"></custom-icon>
+                <custom-typography type="label">Javascript</custom-typography>
+            </span>
+
+            <custom-typography slot="project-description" type="label">Developed a personal portfolio website from scratch to exhibit my projects, professional experiences, and technical proficiencies.</custom-typography>
+            <custom-typography slot="project-description" type="label">Fully designed with Figma, utilizing its powerful tools to prototype and refine the website's aesthetics and user experience.</custom-typography>
+            <custom-typography slot="project-description" type="label">Implemented responsive design principles to ensure the website's compatibility with various devices and screen sizes.</custom-typography>
+            <custom-typography slot="project-description" type="label">Created crafted custom elements to create uniques elements across the website.</custom-typography>
+        </custom-project-popup>
+
     </section>
 
     <section id="contact-me">
@@ -80,9 +125,9 @@
             <div id="contact-buttons">
                 <custom-button size="m" text="Get In Touch" onclick="sendMessage()"></custom-button>
                 <div id="contact-media">
-                    <custom-button icon="./assets/google.svg" size="m" mode="light" onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
-                    <custom-button icon="./assets/linkedin.svg" size="m" mode="light" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
-                    <custom-button icon="./assets/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
+                    <custom-button icon="./assets/icons/google.svg" size="m" mode="light" onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
+                    <custom-button icon="./assets/icons/linkedin.svg" size="m" mode="light" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
+                    <custom-button icon="./assets/icons/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
                 </div>
             </div>
         </div>

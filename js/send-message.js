@@ -72,13 +72,5 @@ function sendEmail(data) {
             subject: `[Guilherme's Website] - New message from ${data.email}`,
             text: `Person Name: ${data.name}\nPerson Company: ${data.company}\nMessage: ${data.message}`
         })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(json => console.log(json))
-    .catch(error => console.error('Error:', error));
+    });
 }

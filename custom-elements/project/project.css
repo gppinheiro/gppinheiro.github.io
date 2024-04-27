@@ -37,12 +37,16 @@
 
 .container .content custom-typography[type='title'],
 .container .content custom-typography[type='h2'],
-.container .content custom-a {
+.container .content custom-icon {
     color: var(--white);
 }
 
 .container .content custom-typography[type='p'] {
     color: var(--zinc-500);
+}
+
+.container .content custom-icon {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {

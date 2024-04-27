@@ -1,15 +1,16 @@
 export default class Project extends HTMLElement {
     static get observedAttributes() {
-        return ['setImage','number','imageUrl','title','goLinkUrl'];
+        return ['id','setImage','number','imageUrl','title','onclickFunction'];
     }
 
     constructor() {
         super();
+        this.id = this.getAttribute('id') || '';
         this.setImage = this.getAttribute('setImage') || 'right';
         this.number = this.getAttribute('number') || '0';
         this.imageUrl = this.getAttribute('imageUrl') || '';
         this.title = this.getAttribute('title') || '';
-        this.goLinkUrl = this.getAttribute('goLinkUrl') || '';
+        this.onclickFunction = this.getAttribute('onclickFunction') || '';
         this.attachShadow({ mode: 'open' });
     }
 
@@ -24,6 +25,8 @@ export default class Project extends HTMLElement {
                 ${this.renderContainer()}
             </div>
         `;
+
+        this.shadowRoot.querySelector('custom-icon').addEventListener('click', this.openPopup.bind(this));
     }
 
     renderContainer() {
@@ -56,9 +59,16 @@ export default class Project extends HTMLElement {
                 <custom-typography type="p">
                     <slot></slot>
                 </custom-typography>
-                <custom-a type="icon" href="${this.goLinkUrl}">read_more</custom-a>
+                <custom-icon size="xl">read_more</custom-icon>
             </div>
         `;
+    }
+
+    openPopup() {
+        if(this.id !== '') {
+            const popup = document.getElementById(`popup-${this.id}`);
+            popup.show();
+        }
     }
 }
 
