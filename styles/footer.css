@@ -12,6 +12,10 @@ footer custom-typography {
     text-align: right;
 }
 
+footer custom-logo {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 576px) {
     footer {
         gap: 16px;

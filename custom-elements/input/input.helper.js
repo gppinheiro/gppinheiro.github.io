@@ -32,7 +32,7 @@ export default class InputHelper {
     }
 
     renderErrorMessage() {
-        return `<custom-typography type="p">${this.input.statusMessage}</custom-typography>`;
+        return `<custom-typography type="label">${this.input.statusMessage}</custom-typography>`;
     }
 
     renderTextArea() {

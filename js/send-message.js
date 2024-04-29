@@ -24,7 +24,7 @@ function isFormValid(nameEl, emailEl, messageEl) {
 
     if (name === '') {
         nameEl.setAttribute('status' ,'error');
-        nameEl.setAttribute('statusmessage' ,'Please enter your name');
+        nameEl.setAttribute('statusmessage' ,'Please enter your name.');
         isValid = false;
     }
     else {
@@ -33,7 +33,7 @@ function isFormValid(nameEl, emailEl, messageEl) {
 
     if (!isEmailValid(email) || email === '') {
         emailEl.setAttribute('status' ,'error');
-        emailEl.setAttribute('statusmessage' ,'Please enter a valid email address');
+        emailEl.setAttribute('statusmessage' ,'Please enter a valid email address.');
         isValid = false;
     }
     else {
@@ -42,7 +42,7 @@ function isFormValid(nameEl, emailEl, messageEl) {
 
     if (message === '') {
         messageEl.setAttribute('status' ,'error');
-        messageEl.setAttribute('statusmessage' ,'Please enter a message');
+        messageEl.setAttribute('statusmessage' ,'Please enter a message.');
         isValid = false;
     }
     else {

@@ -1,3 +1,5 @@
+@import './../typography/typography.css';
+
 input,
 textarea {
     width: calc(100% - 16px - 16px - 1.5px - 1.5px);

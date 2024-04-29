@@ -11,6 +11,10 @@ header {
     background-color: var(--white);
 }
 
+header custom-logo {
+    cursor: pointer;
+}
+
 header #menu {
     display: flex;
     flex-direction: row;
