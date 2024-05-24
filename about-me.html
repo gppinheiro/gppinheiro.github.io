@@ -28,14 +28,14 @@
         <div id="burger-menu-content">
             <custom-a href="./index.html">Home</custom-a>
             <custom-a href="./index.html#projects">Projects</custom-a>
-            <custom-a href="#contact-me">Contact Me</custom-a>
+            <custom-a href="#contact-me" onclick="closeMenu()">Contact Me</custom-a>
             <custom-button icon="download" size="m" text="CV" onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
         </div>
     </header>
 
     <section id="about-me">
         <div id="about-me-image">
-            <img src="./assets/guilherme.jpeg">
+            <img src="./assets/guilherme.jpeg" alt="guilherme-picture">
         </div>
         <div id="about-me-text">
             <div id="about-me-title">
@@ -107,7 +107,7 @@
             logoUrl="./assets/icons/feup.jpeg"
             title="BEng + MEng, Electrical & Computers Engineering at FEUP"
             date="Jul. 2017 - Jul. 2022"
-        >   
+        >
             <ul>
                 <li>Graduated with an A.</li>
                 <li>Field of studies: Electronics & Automation.</li>
@@ -138,10 +138,6 @@
         <div id="contact-text">
             <custom-typography type="title" weight="extra-bold">Get in touch with me</custom-typography>
             <custom-typography type="p">Feel free to reach out if you're interested in exploring new projects together!</custom-typography>
-            <div id="contact-info">
-                <custom-typography type="h3" weight="semi-bold" onclick="goTo('mailto:pinheiropgui@gmail.com', false)">pinheiropgui@gmail.com</custom-typography>
-                <custom-typography type="h3" weight="semi-bold" onclick="goTo('tel:+351938400164', false)">(+351) 938400164</custom-typography>
-            </div>
         </div>
     </section>
 

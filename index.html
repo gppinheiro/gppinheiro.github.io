@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Pinheiro</title>
+    <meta name="description" content="Guilherme's personal website to showcase his projects and experiences.">
+
+    <title>Guilherme Pinheiro's Portfolio</title>
     <link rel="icon" href="./assets/icons/guilherme.ico">
 
     <link rel="stylesheet" href="./styles/style.css">
@@ -27,8 +29,8 @@
         </div>
         <div id="burger-menu-content">
             <custom-a href="./about-me.html">About Me</custom-a>
-            <custom-a href="#projects">Projects</custom-a>
-            <custom-a href="#contact-me">Contact Me</custom-a>
+            <custom-a href="#projects" onclick="closeMenu()">Projects</custom-a>
+            <custom-a href="#contact-me" onclick="closeMenu()">Contact Me</custom-a>
             <custom-button icon="download" size="m" text="CV" onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
         </div>
     </header>
@@ -55,7 +57,7 @@
                 <custom-button icon="./assets/icons/github.svg" size="m" mode="light" onclick="goTo('https://github.com/gppinheiro')"></custom-button>
             </div>
         </div>
-        <img src="./assets/guilherme.jpeg">
+        <img src="./assets/guilherme.jpeg" alt="guilherme-picture">
     </section>
 
     <section id="projects" class="cards">
@@ -140,10 +142,6 @@
         <div id="contact-text">
             <custom-typography type="title" weight="extra-bold">Get in touch with me</custom-typography>
             <custom-typography type="p">Feel free to reach out if you're interested in exploring new projects together!</custom-typography>
-            <div id="contact-info">
-                <custom-typography type="h3" weight="semi-bold" onclick="goTo('mailto:pinheiropgui@gmail.com', false)">pinheiropgui@gmail.com</custom-typography>
-                <custom-typography type="h3" weight="semi-bold" onclick="goTo('tel:+351938400164', false)">(+351) 938400164</custom-typography>
-            </div>
         </div>
     </section>
 
