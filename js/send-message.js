@@ -3,6 +3,7 @@ export default function sendMessage() {
     const email = document.getElementById('contact-email');
     const company = document.getElementById('contact-company');
     const message = document.getElementById('contact-message');
+    const submitButton = document.querySelector('#contact-buttons custom-button');
 
     if (isFormValid(name, email, message)) {
         const data = {
@@ -11,8 +12,19 @@ export default function sendMessage() {
             company: company.value,
             message: message.value
         };
-
-        sendEmail(data);
+        submitButton.setAttribute('disabled', 'true');
+        showToast("Sending message...", "info");
+        
+        sendEmail(data)
+            .then(() => {
+                showToast("Message sent successfully!");
+                clearFormFields(name, email, company, message);
+            })
+            .catch(error => {
+                //console.error("Error sending message:", error);
+                showToast("Failed to send message. Please try again.", "error");
+                submitButton.removeAttribute('disabled');
+            });
     }
 }
 
@@ -63,7 +75,7 @@ function isEmailValid(email) {
 }
 
 function sendEmail(data) {
-    fetch('https://nodejs-server-4olhbqwz7a-ew.a.run.app/send-email', {
+    return fetch('https://nodejs-server-4olhbqwz7a-ew.a.run.app/send-email', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -72,5 +84,108 @@ function sendEmail(data) {
             subject: `[Guilherme's Website] - New message from ${data.email}`,
             text: `Person Name: ${data.name}\nPerson Company: ${data.company}\nMessage: ${data.message}`
         })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response;
+    });
+}
+
+function showToast(message, type = "success") {
+    const existingToast = document.getElementById('toast-notification');
+    if (existingToast) {
+        document.body.removeChild(existingToast);
+    }
+    
+    const toast = document.createElement('div');
+    toast.id = 'toast-notification';
+    toast.className = 'toast-notification';
+    
+    if (type === "success") {
+        toast.classList.add('toast-success');
+    } else if (type === "error") {
+        toast.classList.add('toast-error');
+    } else if (type === "info") {
+        toast.classList.add('toast-info');
+    }
+    
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    if (type !== "error") {
+        setTimeout(() => {
+            toast.classList.add('toast-hidden');
+            setTimeout(() => {
+                if (toast && toast.parentNode) {
+                    document.body.removeChild(toast);
+                }
+            }, 300);
+        }, 5000);
+    } else {
+        // Add a close button for errors
+        const closeBtn = document.createElement('span');
+        closeBtn.textContent = '✕';
+        closeBtn.className = 'toast-close-btn';
+        closeBtn.onclick = function() {
+            toast.classList.add('toast-hidden');
+            setTimeout(() => {
+                if (toast && toast.parentNode) {
+                    document.body.removeChild(toast);
+                }
+            }, 300);
+        };
+        toast.appendChild(closeBtn);
+        
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        toast.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        toast.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) { 
+                toast.classList.add('toast-hidden');
+                toast.classList.add('toast-slide-left');
+                setTimeout(() => {
+                    if (toast && toast.parentNode) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }
+        }
+    }
+}
+
+function clearFormFields(...elements) {
+    elements.forEach(element => {
+        try {
+            if (typeof element.reset === 'function') {
+                element.reset();
+            }
+            else if (typeof element.setValue === 'function') {
+                element.setValue('');
+            }
+            else {
+                const clearEvent = new CustomEvent('clear-value', {
+                    bubbles: true,
+                    detail: { value: '' }
+                });
+                element.dispatchEvent(clearEvent);
+                const internalInput = element.querySelector('input, textarea');
+                if (internalInput) {
+                    internalInput.value = '';
+                }
+            }
+        } catch (e) {
+            //console.warn('Could not clear form field:', e);
+        }
     });
 }

@@ -4,6 +4,7 @@
 @import './footer.css';
 @import './header.css';
 @import './intro.css';
+@import './toast.css';
 @import './../custom-elements/modules.css';
 
 body {

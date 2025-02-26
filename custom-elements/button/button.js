@@ -1,6 +1,6 @@
 export default class Button extends HTMLElement {
     static get observedAttributes() {
-        return ['size','icon','text','mode'];
+        return ['size','icon','text','mode','disabled'];
     }
 
     constructor() {
@@ -9,6 +9,7 @@ export default class Button extends HTMLElement {
         this.icon = this.getAttribute('icon');
         this.text = this.getAttribute('text');
         this.mode = this.getAttribute('mode') || 'dark';
+        this.disabled = this.hasAttribute('disabled');
         this.attachShadow({ mode: 'open' });
     }
 
@@ -17,7 +18,12 @@ export default class Button extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if ((name === 'size') && oldValue !== newValue) {
+        if (oldValue !== newValue) {
+            if (name === 'disabled') {
+                this.disabled = this.hasAttribute('disabled');
+            } else {
+                this[name] = newValue;
+            }
             this.render();
         }
     }
@@ -25,7 +31,7 @@ export default class Button extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./custom-elements/button/button.css">
-            <button class="${this.size} ${this.mode}">
+            <button class="${this.size} ${this.mode}" ${this.disabled ? 'disabled' : ''}>
                 ${this.renderButton()}
             </button>
         `;

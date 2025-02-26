@@ -12,6 +12,8 @@
     --zinc-500: #71717A;
     --zinc-800: #27272A;
     --error: #EF4444;
+    --success: #48826e;
+    --info: #186fb6;
 
     /* Typography */
     --font-family: 'Open Sans', sans-serif;
