@@ -18,7 +18,6 @@ export default function sendMessage() {
         sendEmail(data)
             .then(() => {
                 showToast("Message sent successfully!");
-                clearFormFields(name, email, company, message);
             })
             .catch(error => {
                 //console.error("Error sending message:", error);
@@ -162,30 +161,4 @@ function showToast(message, type = "success") {
             }
         }
     }
-}
-
-function clearFormFields(...elements) {
-    elements.forEach(element => {
-        try {
-            if (typeof element.reset === 'function') {
-                element.reset();
-            }
-            else if (typeof element.setValue === 'function') {
-                element.setValue('');
-            }
-            else {
-                const clearEvent = new CustomEvent('clear-value', {
-                    bubbles: true,
-                    detail: { value: '' }
-                });
-                element.dispatchEvent(clearEvent);
-                const internalInput = element.querySelector('input, textarea');
-                if (internalInput) {
-                    internalInput.value = '';
-                }
-            }
-        } catch (e) {
-            //console.warn('Could not clear form field:', e);
-        }
-    });
 }
