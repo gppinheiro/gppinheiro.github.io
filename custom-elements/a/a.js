@@ -1,12 +1,12 @@
 export default class A extends HTMLElement {
     static get observedAttributes() {
-        return ['href','type'];
+        return ['href', 'type'];
     }
 
     constructor() {
         super();
         this.href = this.getAttribute('href') || '#';
-        this.type = this.getAttribute('type') || 'text';
+        this.type = this.getAttribute('type') || '';
         this.attachShadow({ mode: 'open' });
     }
 
@@ -27,8 +27,12 @@ export default class A extends HTMLElement {
         switch (this.type) {
             case 'icon':
                 return this.renderIcon();
-            default:
+            case 'text':
                 return this.renderText();
+            default:
+                return `
+                    <slot></slot>
+                `;
         }
     }
 

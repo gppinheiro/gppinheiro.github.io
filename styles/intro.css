@@ -1,5 +1,5 @@
 #intro {
-    margin-top: calc(4% + 51px);
+    margin-top: calc(4% + 100px);
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
