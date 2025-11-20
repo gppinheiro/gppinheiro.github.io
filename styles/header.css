@@ -67,3 +67,9 @@ header #burger-menu-content {
         display: block;
     }
 }
+
+@media screen and (min-width: 1264px) {
+    header {
+        max-width: 80%;
+    }
+}

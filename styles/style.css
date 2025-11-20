@@ -8,8 +8,16 @@
 @import './../custom-elements/modules.css';
 
 body {
-  margin:0;
+  margin: 0;
+  background-color: var(--black);
+}
+
+main {
   background-color: var(--white);
+  position: relative;
+  z-index: 1;
+  border-radius: 0 0 32px 32px;
+  /* Optional: rounded bottom for main content */
 }
 
 section {

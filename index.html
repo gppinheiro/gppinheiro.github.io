@@ -16,338 +16,53 @@
 </head>
 
 <body>
-    <header>
-        <custom-logo onclick="goTo('', false)"></custom-logo>
-        <div id="menu">
-            <custom-a href="./about-me.html" type="text">About Me</custom-a>
-            <custom-a href="#projects" type="text">Projects</custom-a>
-            <custom-a href="#contact-me" type="text">Contact Me</custom-a>
-        </div>
-        <custom-button id="button-cv" icon="download" size="m" text="CV"
-            onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
-        <div id="burger-menu">
-            <custom-icon size="xl">menu</custom-icon>
-        </div>
-        <div id="burger-menu-content">
-            <custom-a href="./about-me.html" type="text">About Me</custom-a>
-            <custom-a href="#projects" type="text" onclick="closeMenu()">Projects</custom-a>
-            <custom-a href="#contact-me" type="text" onclick="closeMenu()">Contact Me</custom-a>
-            <custom-button icon="download" size="m" text="CV"
+    <main>
+        <header>
+            <custom-logo onclick="goTo('', false)"></custom-logo>
+            <div id="menu">
+                <custom-a href="./about-me.html" type="text">About Me</custom-a>
+                <custom-a href="#projects" type="text">Projects</custom-a>
+                <custom-a href="#contact-me" type="text">Contact Me</custom-a>
+            </div>
+            <custom-button id="button-cv" icon="download" size="m" text="CV"
                 onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
-        </div>
-    </header>
-
-    <section id="intro">
-        <div id="intro-content">
-            <div id="intro-titles">
-                <div id="intro-name">
-                    <custom-typography type="title">Hello I'm </custom-typography>
-                    <custom-typography type="title" weight="extra-bold">Guilherme Pinheiro.</custom-typography>
-                </div>
-                <div id="intro-job">
-                    <custom-typography type="title" weight="extra-bold">Full Stack Software
-                        Engineer.</custom-typography>
-                </div>
-                <div id="intro-country">
-                    <custom-typography type="title">Based In </custom-typography>
-                    <custom-typography type="title" weight="extra-bold">Portugal.</custom-typography>
-                </div>
+            <div id="burger-menu">
+                <custom-icon size="xl">menu</custom-icon>
             </div>
-            <custom-typography type="p">I am an engineer passionate about the evolution of technology and its global
-                impact. My drive for innovation is demonstrated through my current pursuit of an Executive Master in
-                Business Innovation and the development of one business venture. I approach challenges with energy and
-                enthusiasm, guided by the core principles of collaboration, proactivity, and determination. Through
-                extensive reading and side projects in finance investment, I consistently look for new ways to grow and
-                create value.</custom-typography>
-            <div id="intro-media">
-                <custom-button icon="./assets/icons/google.svg" size="m" mode="light"
-                    onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
-                <custom-button icon="./assets/icons/linkedin.svg" size="m" mode="light"
-                    onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-button>
-                <custom-button icon="./assets/icons/github.svg" size="m" mode="light"
-                    onclick="goTo('https://github.com/gppinheiro')"></custom-button>
+            <div id="burger-menu-content">
+                <custom-a href="./about-me.html" type="text">About Me</custom-a>
+                <custom-a href="#projects" type="text" onclick="closeMenu()">Projects</custom-a>
+                <custom-a href="#contact-me" type="text" onclick="closeMenu()">Contact Me</custom-a>
+                <custom-button icon="download" size="m" text="CV"
+                    onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
             </div>
-        </div>
-        <img src="./assets/guilherme.jpeg" alt="guilherme-picture">
-    </section>
+        </header>
 
-    <section id="projects" class="cards">
-        <custom-typography type="title" weight="extra-bold">Projects</custom-typography>
-
-        <custom-project id="project-01" setImage="right" number="1" imageUrl="./assets/projects/project_01.png"
-            title="Guilherme's Website">
-            A personal website to showcase my projects and experiences.
-        </custom-project>
-        <custom-project-popup id="popup-project-01" projectName="Guilherme's Website">
-            <custom-typography slot="project-links" type="p">
-                Link: <custom-a href="">Website</custom-a>
-            </custom-typography>
-            <custom-typography slot="project-links" type="p">
-                Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
-            </custom-typography>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/css.svg"></custom-icon>
-                <custom-typography type="label">CSS</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
-                <custom-typography type="label">Figma</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
-                <custom-typography type="label">Git</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
-                <custom-typography type="label">Github</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/html.svg"></custom-icon>
-                <custom-typography type="label">HTML</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/javascript.svg"></custom-icon>
-                <custom-typography type="label">Javascript</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/rollup.svg"></custom-icon>
-                <custom-typography type="label">Rollup</custom-typography>
-            </span>
-
-            <custom-typography slot="project-description" type="label">Developed a personal portfolio website from
-                scratch to exhibit my projects, professional experiences, and technical
-                proficiencies.</custom-typography>
-            <custom-typography slot="project-description" type="label">Fully designed with Figma, utilizing its powerful
-                tools to prototype and refine the website's aesthetics and user experience.</custom-typography>
-            <custom-typography slot="project-description" type="label">Implemented responsive design principles to
-                ensure the website's compatibility with various devices and screen sizes.</custom-typography>
-            <custom-typography slot="project-description" type="label">Created crafted custom elements to create uniques
-                elements across the website.</custom-typography>
-        </custom-project-popup>
-
-        <custom-project id="project-02" setImage="left" number="2" imageUrl="./assets/projects/project_02.png"
-            title="Stock Analysis Algorithm">
-            Algorithm that is segmented into 4 parts: Stock Analysis System, Recommendation Engine, Economic Factors
-            Monitor and Identity Service.
-        </custom-project>
-        <custom-project-popup id="popup-project-02" projectName="Stock Analysis Algorithm">
-            <custom-typography slot="project-links" type="p">
-                Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
-            </custom-typography>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
-                <custom-typography type="label">Git</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
-                <custom-typography type="label">Github</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/oracle.svg"></custom-icon>
-                <custom-typography type="label">Oracle</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
-                <custom-typography type="label">Python</custom-typography>
-            </span>
-
-            <custom-typography slot="project-description" type="p">SAA: Unlocking the Power of Value
-                Investing</custom-typography>
-            <custom-typography slot="project-description" type="label">The project began with a strong desire to dive
-                deeper into various tech stacks and explore existing software engineering patterns. Alongside this, my
-                enduring love for data and creating algorithms that can truly make a difference fueled my motivation. A
-                key personal goal has been to generate a passive income that surpasses my monthly earnings. Combining
-                these three ambitions, I embarked on developing a Stock Picking Algorithm.</custom-typography>
-            <custom-typography slot="project-description" type="label">The journey was not without its challenges.
-                Initially, I was faced with identifying the most suitable tech stack. Just two months ago, I decided to
-                undertake a major refactor, segmenting the algorithm into four distinct systems:</custom-typography>
-            <custom-typography slot="project-description" type="label">🚦 Stock Analysis System: Leveraging principles
-                from Value/Fundamental Investing and basic technical analysis inspired by various books and
-                articles.</custom-typography>
-            <custom-typography slot="project-description" type="label">💡 Recommendation Engine: Utilizing my database
-                to suggest which stocks to buy or monitor.</custom-typography>
-            <custom-typography slot="project-description" type="label">📊 Economic Factors Monitor: Keeping track of
-                critical economic indicators.</custom-typography>
-            <custom-typography slot="project-description" type="label">🔐 Identity Service: Implementing a security
-                layer for my services API's.</custom-typography>
-            <custom-typography slot="project-description" type="label">It is important to note that this algorithm
-                currently operates automatically for US stocks only. I source data freely from the SEC and other APIs,
-                with economic indicators being retrieved from the Bureau of Economic Analysis (BEA).</custom-typography>
-            <custom-typography slot="project-description" type="label">Remarkably, the system has been running for a
-                year now, and I have managed to keep the total cost at ZERO euros. The portfolio's average profitability
-                stands at around 18%, despite some initial missteps in stock selection. Today, I have much greater
-                confidence in the algorithm's capabilities.</custom-typography>
-            <custom-typography slot="project-description" type="label">Some might wonder, why not simply invest in an
-                S&P 500 fund? For me, the answer is clear: I wanted to learn how the great minds picked the best stocks
-                in the past.</custom-typography>
-
-            <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: Data
-                Acquisition</custom-typography>
-            <custom-typography slot="project-description" type="label">For the stock analysis algorithm, I only analyse
-                financial data of US-listed companies. My goal is to continue having zero costs while ensuring data
-                quality. Here's a brief overview of my approach and the tools I use.</custom-typography>
-            <custom-typography slot="project-description" type="label">🇺🇸 Why US Public Companies?</custom-typography>
-            <custom-typography slot="project-description" type="label">US public companies must disclose their financial
-                statements publicly, providing a wealth of free, high-quality data. This makes the US market an ideal
-                starting point for algorithm development.</custom-typography>
-            <custom-typography slot="project-description" type="label">💾 Data Sources and APIs</custom-typography>
-            <custom-typography slot="project-description" type="label">SEC API: The Securities and Exchange Commission
-                offers a reliable API to access a wide range of financial statements and filings of public companies. It
-                is the cornerstone of my data strategy.</custom-typography>
-            <custom-typography slot="project-description" type="label">BEA API: The Bureau of Economic Analysis API
-                provides valuable economic data, complementing the financial data from the SEC.</custom-typography>
-            <custom-typography slot="project-description" type="label">Other APIs: I've also tested APIs like Alpha
-                Spread, FRED, and unofficial Yahoo Finance APIs. However, these sources often have confusing data
-                structures, requiring additional processing.</custom-typography>
-            <custom-typography slot="project-description" type="label">🔴 Challenges and
-                Considerations</custom-typography>
-            <custom-typography slot="project-description" type="label">Data Consistency: Ensuring data from different
-                sources is consistent and high-quality is challenging.</custom-typography>
-            <custom-typography slot="project-description" type="label">Cost Management: By using publicly available
-                data, I have none costs.</custom-typography>
-            <custom-typography slot="project-description" type="label">API Limitations: Navigating rate limits and other
-                constraints of each API is crucial for smooth data acquisition.</custom-typography>
-            <custom-typography slot="project-description" type="label">🌫 Future Directions</custom-typography>
-            <custom-typography slot="project-description" type="label">I plan to expand the algorithm's scope to include
-                companies outside the US, identifying new data sources while maintaining a cost-effective approach. My
-                next steps on this matter is to get data as reported. Data that was not processed by
-                others.</custom-typography>
-
-            <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: Validating Data
-                Updates and Managing API Rate Limits</custom-typography>
-            <custom-typography slot="project-description" type="label">🔍 Validating Data Updates</custom-typography>
-            <custom-typography slot="project-description" type="label">Check for Existing Data</custom-typography>
-            <custom-typography slot="project-description" type="label">First, I determine if the stock data already
-                exists in my database.</custom-typography>
-            <custom-typography slot="project-description" type="label">If not, I request all necessary data from
-                external APIs.</custom-typography>
-            <custom-typography slot="project-description" type="label">Verify Annual and Quarterly
-                Data</custom-typography>
-            <custom-typography slot="project-description" type="label">For existing stocks, I check if the annual and
-                quarterly data is up to date.</custom-typography>
-            <custom-typography slot="project-description" type="label">If discrepancies are found, I update the data
-                accordingly.</custom-typography>
-            <custom-typography slot="project-description" type="label">Retrieve Real-Time Data</custom-typography>
-            <custom-typography slot="project-description" type="label">For real-time data, I always query external APIs
-                to ensure the most current information.</custom-typography>
-            <custom-typography slot="project-description" type="label">🌐 Managing API Rate Limits</custom-typography>
-            <custom-typography slot="project-description" type="label">Understand Rate Limits</custom-typography>
-            <custom-typography slot="project-description" type="label">Familiarize yourself with each API's rate limits
-                and constraints.</custom-typography>
-            <custom-typography slot="project-description" type="label">Monitor and Alert</custom-typography>
-            <custom-typography slot="project-description" type="label">I launch an exception before reaching the hitting
-                limits. I created an exception called RateLimitError.</custom-typography>
-
-            <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: From AWS to Raspberry
-                Pi to Oracle 🚀</custom-typography>
-            <custom-typography slot="project-description" type="label">Navigating the world of data storage has been
-                quite the adventure for me! Here's a glimpse into my journey and the lessons I've learned along the
-                way:</custom-typography>
-            <custom-typography slot="project-description" type="label">🌟 AWS Free Tier & PostgreSQL</custom-typography>
-            <custom-typography slot="project-description" type="label">I started my journey using AWS's free tier with
-                PostgreSQL. It seemed like a perfect start until I discovered that AWS enabled diagnostics by default,
-                which led to unexpected monthly charges. This experience taught me the importance of thoroughly
-                understanding the cost implications of cloud services.</custom-typography>
-            <custom-typography slot="project-description" type="label">🔧 Building a Raspberry Pi Server with
-                MariaDB</custom-typography>
-            <custom-typography slot="project-description" type="label">Determined to find a cost-effective solution, I
-                decided to build my own server using a Raspberry Pi and MariaDB. This DIY approach was a fantastic
-                learning experience, and I enjoyed the hands-on work. However, maintaining the server became
-                increasingly time-consuming and tedious over the course of a year.</custom-typography>
-            <custom-typography slot="project-description" type="label">🧑‍💻 Transition to Oracle with PL
-                SQL</custom-typography>
-            <custom-typography slot="project-description" type="label">Eventually, I transitioned to using Oracle with
-                PL SQL. This shift came with its own set of challenges, primarily adapting my queries and algorithms to
-                fit a new database system. However, it also provided a robust and reliable solution that required less
-                day-to-day maintenance.</custom-typography>
-            <custom-typography slot="project-description" type="label">🎓 Lessons Learned</custom-typography>
-            <custom-typography slot="project-description" type="label">Cost Awareness: Always investigate the potential
-                hidden costs of cloud services.</custom-typography>
-            <custom-typography slot="project-description" type="label">Hands-on Experience: Building and maintaining
-                your own server is invaluable for learning but can be labor-intensive.</custom-typography>
-            <custom-typography slot="project-description" type="label">Flexibility: Be prepared to adapt and rewrite
-                your queries and algorithms when switching databases.</custom-typography>
-            <custom-typography slot="project-description" type="label">Reliability: Sometimes, investing in a more
-                robust, albeit complex, solution pays off in the long run.</custom-typography>
-        </custom-project-popup>
-
-        <custom-project id="project-03" setImage="right" number="3" imageUrl="./assets/projects/project_03.png"
-            title="Post2Pod">
-            Learn by listening, leave the reading for us.
-        </custom-project>
-        <custom-project-popup id="popup-project-03" projectName="Post2Pod">
-            <custom-typography slot="project-links" type="p">
-                Link: <custom-a href="https://post2pod.com">Website</custom-a>
-            </custom-typography>
-            <custom-typography slot="project-links" type="p">
-                Developed By: Post2Pod Team
-            </custom-typography>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
-                <custom-typography type="label">AI</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
-                <custom-typography type="label">Figma</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
-                <custom-typography type="label">Github</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
-                <custom-typography type="label">GC</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
-                <custom-typography type="label">Python</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
-                <custom-typography type="label">React</custom-typography>
-            </span>
-
-            <span slot="project-tools" class="project-tool">
-                <custom-icon size="xl" img="./assets/icons/vite.svg"></custom-icon>
-                <custom-typography type="label">Vite</custom-typography>
-            </span>
-
-            <custom-typography slot="project-description" type="label">Tired of endless reading lists? Let us do the
-                reading for you. With Post2Pod, transform news articles, blog posts, and newsletters into podcast
-                episodes that you can enjoy on your favorite listening app.</custom-typography>
-            <custom-typography slot="project-description" type="label">For business, we offer a white label solution,
-                allowing you to create your own podcast network in our B2B portal.</custom-typography>
-            <custom-typography slot="project-description" type="label">For users, we offer a free google extension to
-                easily convert articles to podcasts.</custom-typography>
-        </custom-project-popup>
-    </section>
-
-    <section id="contact-me">
-        <div id="contact-form">
-            <custom-input id="contact-name" type="text" placeholder="Name"></custom-input>
-            <custom-input id="contact-email" type="email" placeholder="Email"></custom-input>
-            <custom-input id="contact-company" type="text" placeholder="Company"></custom-input>
-            <custom-input id="contact-message" type="textarea" placeholder="Write your message here."></custom-input>
-            <div id="contact-buttons">
-                <custom-button size="m" text="Get In Touch" onclick="sendMessage()"></custom-button>
-                <div id="contact-media">
+        <section id="intro">
+            <div id="intro-content">
+                <div id="intro-titles">
+                    <div id="intro-name">
+                        <custom-typography type="title">Hello I'm </custom-typography>
+                        <custom-typography type="title" weight="extra-bold">Guilherme Pinheiro.</custom-typography>
+                    </div>
+                    <div id="intro-job">
+                        <custom-typography type="title" weight="extra-bold">Full Stack Software
+                            Engineer.</custom-typography>
+                    </div>
+                    <div id="intro-country">
+                        <custom-typography type="title">Based In </custom-typography>
+                        <custom-typography type="title" weight="extra-bold">Portugal.</custom-typography>
+                    </div>
+                </div>
+                <custom-typography type="p">I am an engineer passionate about the evolution of technology and its global
+                    impact. My drive for innovation is demonstrated through my current pursuit of an Executive Master in
+                    Business Innovation and the development of one business venture. I approach challenges with energy
+                    and
+                    enthusiasm, guided by the core principles of collaboration, proactivity, and determination. Through
+                    extensive reading and side projects in finance investment, I consistently look for new ways to grow
+                    and
+                    create value.</custom-typography>
+                <div id="intro-media">
                     <custom-button icon="./assets/icons/google.svg" size="m" mode="light"
                         onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-button>
                     <custom-button icon="./assets/icons/linkedin.svg" size="m" mode="light"
@@ -356,14 +71,333 @@
                         onclick="goTo('https://github.com/gppinheiro')"></custom-button>
                 </div>
             </div>
-        </div>
+            <img src="./assets/guilherme.jpeg" alt="guilherme-picture">
+        </section>
 
-        <div id="contact-text">
-            <custom-typography type="title" weight="extra-bold">Get in touch with me</custom-typography>
-            <custom-typography type="p">Feel free to reach out if you're interested in exploring new projects
-                together!</custom-typography>
-        </div>
-    </section>
+        <section id="projects" class="cards">
+            <custom-typography type="title" weight="extra-bold">Projects</custom-typography>
+
+            <custom-project id="project-01" setImage="right" number="1" imageUrl="./assets/projects/project_01.png"
+                title="Guilherme's Website">
+                A personal website to showcase my projects and experiences.
+            </custom-project>
+            <custom-project-popup id="popup-project-01" projectName="Guilherme's Website">
+                <custom-typography slot="project-links" type="p">
+                    Link: <custom-a href="">Website</custom-a>
+                </custom-typography>
+                <custom-typography slot="project-links" type="p">
+                    Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/css.svg"></custom-icon>
+                    <custom-typography type="label">CSS</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
+                    <custom-typography type="label">Figma</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
+                    <custom-typography type="label">Git</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                    <custom-typography type="label">Github</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/html.svg"></custom-icon>
+                    <custom-typography type="label">HTML</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/javascript.svg"></custom-icon>
+                    <custom-typography type="label">Javascript</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/rollup.svg"></custom-icon>
+                    <custom-typography type="label">Rollup</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">Developed a personal portfolio website from
+                    scratch to exhibit my projects, professional experiences, and technical
+                    proficiencies.</custom-typography>
+                <custom-typography slot="project-description" type="label">Fully designed with Figma, utilizing its
+                    powerful
+                    tools to prototype and refine the website's aesthetics and user experience.</custom-typography>
+                <custom-typography slot="project-description" type="label">Implemented responsive design principles to
+                    ensure the website's compatibility with various devices and screen sizes.</custom-typography>
+                <custom-typography slot="project-description" type="label">Created crafted custom elements to create
+                    uniques
+                    elements across the website.</custom-typography>
+            </custom-project-popup>
+
+            <custom-project id="project-02" setImage="left" number="2" imageUrl="./assets/projects/project_02.png"
+                title="Stock Analysis Algorithm">
+                Algorithm that is segmented into 4 parts: Stock Analysis System, Recommendation Engine, Economic Factors
+                Monitor and Identity Service.
+            </custom-project>
+            <custom-project-popup id="popup-project-02" projectName="Stock Analysis Algorithm">
+                <custom-typography slot="project-links" type="p">
+                    Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
+                    <custom-typography type="label">Git</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                    <custom-typography type="label">Github</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/oracle.svg"></custom-icon>
+                    <custom-typography type="label">Oracle</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="p">SAA: Unlocking the Power of Value
+                    Investing</custom-typography>
+                <custom-typography slot="project-description" type="label">The project began with a strong desire to
+                    dive
+                    deeper into various tech stacks and explore existing software engineering patterns. Alongside this,
+                    my
+                    enduring love for data and creating algorithms that can truly make a difference fueled my
+                    motivation. A
+                    key personal goal has been to generate a passive income that surpasses my monthly earnings.
+                    Combining
+                    these three ambitions, I embarked on developing a Stock Picking Algorithm.</custom-typography>
+                <custom-typography slot="project-description" type="label">The journey was not without its challenges.
+                    Initially, I was faced with identifying the most suitable tech stack. Just two months ago, I decided
+                    to
+                    undertake a major refactor, segmenting the algorithm into four distinct systems:</custom-typography>
+                <custom-typography slot="project-description" type="label">🚦 Stock Analysis System: Leveraging
+                    principles
+                    from Value/Fundamental Investing and basic technical analysis inspired by various books and
+                    articles.</custom-typography>
+                <custom-typography slot="project-description" type="label">💡 Recommendation Engine: Utilizing my
+                    database
+                    to suggest which stocks to buy or monitor.</custom-typography>
+                <custom-typography slot="project-description" type="label">📊 Economic Factors Monitor: Keeping track of
+                    critical economic indicators.</custom-typography>
+                <custom-typography slot="project-description" type="label">🔐 Identity Service: Implementing a security
+                    layer for my services API's.</custom-typography>
+                <custom-typography slot="project-description" type="label">It is important to note that this algorithm
+                    currently operates automatically for US stocks only. I source data freely from the SEC and other
+                    APIs,
+                    with economic indicators being retrieved from the Bureau of Economic Analysis
+                    (BEA).</custom-typography>
+                <custom-typography slot="project-description" type="label">Remarkably, the system has been running for a
+                    year now, and I have managed to keep the total cost at ZERO euros. The portfolio's average
+                    profitability
+                    stands at around 18%, despite some initial missteps in stock selection. Today, I have much greater
+                    confidence in the algorithm's capabilities.</custom-typography>
+                <custom-typography slot="project-description" type="label">Some might wonder, why not simply invest in
+                    an
+                    S&P 500 fund? For me, the answer is clear: I wanted to learn how the great minds picked the best
+                    stocks
+                    in the past.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: Data
+                    Acquisition</custom-typography>
+                <custom-typography slot="project-description" type="label">For the stock analysis algorithm, I only
+                    analyse
+                    financial data of US-listed companies. My goal is to continue having zero costs while ensuring data
+                    quality. Here's a brief overview of my approach and the tools I use.</custom-typography>
+                <custom-typography slot="project-description" type="label">🇺🇸 Why US Public
+                    Companies?</custom-typography>
+                <custom-typography slot="project-description" type="label">US public companies must disclose their
+                    financial
+                    statements publicly, providing a wealth of free, high-quality data. This makes the US market an
+                    ideal
+                    starting point for algorithm development.</custom-typography>
+                <custom-typography slot="project-description" type="label">💾 Data Sources and APIs</custom-typography>
+                <custom-typography slot="project-description" type="label">SEC API: The Securities and Exchange
+                    Commission
+                    offers a reliable API to access a wide range of financial statements and filings of public
+                    companies. It
+                    is the cornerstone of my data strategy.</custom-typography>
+                <custom-typography slot="project-description" type="label">BEA API: The Bureau of Economic Analysis API
+                    provides valuable economic data, complementing the financial data from the SEC.</custom-typography>
+                <custom-typography slot="project-description" type="label">Other APIs: I've also tested APIs like Alpha
+                    Spread, FRED, and unofficial Yahoo Finance APIs. However, these sources often have confusing data
+                    structures, requiring additional processing.</custom-typography>
+                <custom-typography slot="project-description" type="label">🔴 Challenges and
+                    Considerations</custom-typography>
+                <custom-typography slot="project-description" type="label">Data Consistency: Ensuring data from
+                    different
+                    sources is consistent and high-quality is challenging.</custom-typography>
+                <custom-typography slot="project-description" type="label">Cost Management: By using publicly available
+                    data, I have none costs.</custom-typography>
+                <custom-typography slot="project-description" type="label">API Limitations: Navigating rate limits and
+                    other
+                    constraints of each API is crucial for smooth data acquisition.</custom-typography>
+                <custom-typography slot="project-description" type="label">🌫 Future Directions</custom-typography>
+                <custom-typography slot="project-description" type="label">I plan to expand the algorithm's scope to
+                    include
+                    companies outside the US, identifying new data sources while maintaining a cost-effective approach.
+                    My
+                    next steps on this matter is to get data as reported. Data that was not processed by
+                    others.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: Validating Data
+                    Updates and Managing API Rate Limits</custom-typography>
+                <custom-typography slot="project-description" type="label">🔍 Validating Data
+                    Updates</custom-typography>
+                <custom-typography slot="project-description" type="label">Check for Existing Data</custom-typography>
+                <custom-typography slot="project-description" type="label">First, I determine if the stock data already
+                    exists in my database.</custom-typography>
+                <custom-typography slot="project-description" type="label">If not, I request all necessary data from
+                    external APIs.</custom-typography>
+                <custom-typography slot="project-description" type="label">Verify Annual and Quarterly
+                    Data</custom-typography>
+                <custom-typography slot="project-description" type="label">For existing stocks, I check if the annual
+                    and
+                    quarterly data is up to date.</custom-typography>
+                <custom-typography slot="project-description" type="label">If discrepancies are found, I update the data
+                    accordingly.</custom-typography>
+                <custom-typography slot="project-description" type="label">Retrieve Real-Time Data</custom-typography>
+                <custom-typography slot="project-description" type="label">For real-time data, I always query external
+                    APIs
+                    to ensure the most current information.</custom-typography>
+                <custom-typography slot="project-description" type="label">🌐 Managing API Rate
+                    Limits</custom-typography>
+                <custom-typography slot="project-description" type="label">Understand Rate Limits</custom-typography>
+                <custom-typography slot="project-description" type="label">Familiarize yourself with each API's rate
+                    limits
+                    and constraints.</custom-typography>
+                <custom-typography slot="project-description" type="label">Monitor and Alert</custom-typography>
+                <custom-typography slot="project-description" type="label">I launch an exception before reaching the
+                    hitting
+                    limits. I created an exception called RateLimitError.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">SAA: From AWS to
+                    Raspberry
+                    Pi to Oracle 🚀</custom-typography>
+                <custom-typography slot="project-description" type="label">Navigating the world of data storage has been
+                    quite the adventure for me! Here's a glimpse into my journey and the lessons I've learned along the
+                    way:</custom-typography>
+                <custom-typography slot="project-description" type="label">🌟 AWS Free Tier &
+                    PostgreSQL</custom-typography>
+                <custom-typography slot="project-description" type="label">I started my journey using AWS's free tier
+                    with
+                    PostgreSQL. It seemed like a perfect start until I discovered that AWS enabled diagnostics by
+                    default,
+                    which led to unexpected monthly charges. This experience taught me the importance of thoroughly
+                    understanding the cost implications of cloud services.</custom-typography>
+                <custom-typography slot="project-description" type="label">🔧 Building a Raspberry Pi Server with
+                    MariaDB</custom-typography>
+                <custom-typography slot="project-description" type="label">Determined to find a cost-effective solution,
+                    I
+                    decided to build my own server using a Raspberry Pi and MariaDB. This DIY approach was a fantastic
+                    learning experience, and I enjoyed the hands-on work. However, maintaining the server became
+                    increasingly time-consuming and tedious over the course of a year.</custom-typography>
+                <custom-typography slot="project-description" type="label">🧑‍💻 Transition to Oracle with PL
+                    SQL</custom-typography>
+                <custom-typography slot="project-description" type="label">Eventually, I transitioned to using Oracle
+                    with
+                    PL SQL. This shift came with its own set of challenges, primarily adapting my queries and algorithms
+                    to
+                    fit a new database system. However, it also provided a robust and reliable solution that required
+                    less
+                    day-to-day maintenance.</custom-typography>
+                <custom-typography slot="project-description" type="label">🎓 Lessons Learned</custom-typography>
+                <custom-typography slot="project-description" type="label">Cost Awareness: Always investigate the
+                    potential
+                    hidden costs of cloud services.</custom-typography>
+                <custom-typography slot="project-description" type="label">Hands-on Experience: Building and maintaining
+                    your own server is invaluable for learning but can be labor-intensive.</custom-typography>
+                <custom-typography slot="project-description" type="label">Flexibility: Be prepared to adapt and rewrite
+                    your queries and algorithms when switching databases.</custom-typography>
+                <custom-typography slot="project-description" type="label">Reliability: Sometimes, investing in a more
+                    robust, albeit complex, solution pays off in the long run.</custom-typography>
+            </custom-project-popup>
+
+            <custom-project id="project-03" setImage="right" number="3" imageUrl="./assets/projects/project_03.png"
+                title="Post2Pod">
+                Learn by listening, leave the reading for us.
+            </custom-project>
+            <custom-project-popup id="popup-project-03" projectName="Post2Pod">
+                <custom-typography slot="project-links" type="p">
+                    Link: <custom-a href="https://post2pod.com">Website</custom-a>
+                </custom-typography>
+                <custom-typography slot="project-links" type="p">
+                    Developed By: Post2Pod Team
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
+                    <custom-typography type="label">AI</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
+                    <custom-typography type="label">Figma</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                    <custom-typography type="label">Github</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
+                    <custom-typography type="label">GC</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
+                    <custom-typography type="label">React</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/vite.svg"></custom-icon>
+                    <custom-typography type="label">Vite</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">Tired of endless reading lists? Let us do the
+                    reading for you. With Post2Pod, transform news articles, blog posts, and newsletters into podcast
+                    episodes that you can enjoy on your favorite listening app.</custom-typography>
+                <custom-typography slot="project-description" type="label">For business, we offer a white label
+                    solution,
+                    allowing you to create your own podcast network in our B2B portal.</custom-typography>
+                <custom-typography slot="project-description" type="label">For users, we offer a free google extension
+                    to
+                    easily convert articles to podcasts.</custom-typography>
+            </custom-project-popup>
+        </section>
+
+        <section id="contact-me">
+            <div id="contact-content">
+                <custom-typography type="title" weight="extra-bold" style="text-align: center;">Have a project in
+                    mind?</custom-typography>
+                <custom-typography type="h2" style="text-align: center; color: var(--zinc-500);">Let's build something
+                    real
+                    together.</custom-typography>
+                <div id="contact-actions">
+                    <custom-button size="l" text="Get In Touch" onclick="openContactPopup()"></custom-button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-contact-popup></custom-contact-popup>
 
     <footer>
         <div class="footer-content">

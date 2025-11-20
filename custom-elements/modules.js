@@ -6,4 +6,5 @@ import './input/input.js';
 import './logo/logo.js';
 import './project/project.js';
 import './project-popup/project-popup.js';
+import './contact-popup/contact-popup.js';
 import './typography/typography.js';
