@@ -1,5 +1,7 @@
+@import './../shared/constants.css';
 @import './../typography/typography.css';
 
+/* Host with fade-in animation */
 :host {
     display: none;
     position: fixed;
@@ -7,78 +9,282 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: fadeIn 0.2s ease-out;
 }
 
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Main popup container with responsive sizing and theme support */
 .popup {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 900px;
+    max-height: 90vh;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    padding: 2% 5%;
-    border-radius: 10px;
-    gap: 32px;
+    background-color: var(--bg-primary);
+    padding: 40px;
+    border-radius: 16px;
+    gap: 40px;
     overflow: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    scroll-behavior: smooth;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Sticky header with improved styling */
 .popup .popup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
+    position: sticky;
+    top: -40px;
+    background-color: var(--bg-primary);
+    padding: 40px 0 20px 0;
+    margin: -40px -40px 0 -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 10;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
 }
 
+.popup.scrolled .popup-header {
+    border-bottom-color: var(--border-color, rgba(0, 0, 0, 0.1));
+}
+
+.popup .popup-header custom-typography {
+    color: var(--text-primary);
+    flex: 1;
+}
+
+/* Enhanced close button */
 .popup .popup-header custom-icon {
     cursor: pointer;
+    transition: transform 0.2s ease;
+    color: var(--text-primary);
+    flex-shrink: 0;
 }
 
+.popup .popup-header custom-icon:hover {
+    transform: rotate(90deg);
+}
+
+.popup .popup-header custom-icon:focus-visible {
+    outline: none;
+}
+
+/* Project quick links section */
 .popup .project-quick-links {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
 }
 
+.popup .project-quick-links custom-typography {
+    line-height: 1.6;
+}
+
+.popup .project-quick-links custom-typography[type="label"] {
+    color: var(--text-secondary);
+}
+
+.popup .project-quick-links custom-typography:not([type="label"]) {
+    color: var(--text-primary);
+}
+
+.popup .project-quick-links custom-a {
+    color: var(--text-primary);
+}
+
+/* Project tools section with grid layout */
 .popup .project-tools {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.popup .project-tools custom-typography {
-    align-self: center;
-    color: var(--zinc-500);
-}
-
 .popup .project-tools slot {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
+/* Project description section with improved readability */
 .popup .project-description {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 }
 
 .popup .project-description slot {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .popup .project-description custom-typography {
-    align-self: center;
-    color: var(--zinc-500);
+    line-height: 1.8;
+    max-width: 75ch;
 }
 
+.popup .project-description custom-typography[type="label"] {
+    color: var(--text-secondary);
+}
+
+.popup .project-description custom-typography:not([type="label"]) {
+    color: var(--text-primary);
+}
+
+.popup .project-description custom-a {
+    color: var(--text-primary);
+}
+
+/* Section headers within description */
+.popup custom-typography[type="p"] {
+    color: var(--text-primary);
+}
+
+/* Images within popup */
+.popup .project-description img {
+    border-radius: 12px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popup .project-description img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Unused popup content slot - keeping for potential future use */
+.popup .popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Scrollbar styling for better UX */
+.popup::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+.popup::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+/* Tablet breakpoint */
 @media screen and (max-width: 992px) {
+    .popup {
+        width: 92%;
+        padding: 32px;
+        gap: 32px;
+    }
+
+    .popup .popup-header {
+        top: -32px;
+        margin: -32px -32px 0 -32px;
+        padding: 32px 32px 16px 32px;
+    }
+
     .popup .project-tools slot {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+    .popup {
+        width: 95%;
+        max-width: 95vw;
+        max-height: 95vh;
+        padding: 24px;
+        gap: 28px;
+        border-radius: 12px;
+    }
+
+    .popup .popup-header {
+        top: -24px;
+        margin: -24px -24px 0 -24px;
+        padding: 24px 24px 16px 24px;
+        gap: 16px;
+    }
+
+    .popup .popup-header custom-typography {
+        font-size: 1.5rem;
+    }
+
+    .popup .project-tools slot {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 12px;
+    }
+
+    .popup .project-description custom-typography {
+        max-width: 100%;
+    }
+}
+
+/* Small mobile breakpoint */
+@media screen and (max-width: 576px) {
+    .popup {
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .popup .popup-header {
+        top: -20px;
+        margin: -20px -20px 0 -20px;
+        padding: 20px 20px 12px 20px;
+    }
+
+    .popup .project-quick-links {
+        padding: 16px;
+    }
+
+    .popup .project-tools slot {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     }
 }

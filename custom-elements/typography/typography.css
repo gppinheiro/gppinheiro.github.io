@@ -1,6 +1,6 @@
 custom-typography {
     font-family: var(--font-family);
-    color: var(--text);
+    color: var(--text-primary);
     font-weight: var(--font-weight-regular);
 }
 

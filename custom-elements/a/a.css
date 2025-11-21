@@ -2,14 +2,15 @@
 
 a {
     text-decoration: none;
+    color: var(--text-primary);
+}
+
+a:hover {
+    color: var(--text-secondary);
 }
 
 a custom-typography {
-    color: var(--black);
-}
-
-a:hover custom-typography {
-    color: var(--neutral);
+    color: inherit;
 }
 
 a custom-icon {

@@ -57,7 +57,7 @@ custom-project-popup .project-tool {
 }
 
 custom-project-popup custom-typography[type="label"] {
-    color: var(--project-label-color);
+    color: var(--text-secondary);
 }
 
 /* Responsive Grid for Projects */
