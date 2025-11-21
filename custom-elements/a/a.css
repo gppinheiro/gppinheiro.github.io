@@ -2,11 +2,11 @@
 
 a {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--black);
 }
 
 a:hover {
-    color: var(--text-secondary);
+    color: var(--neutral);
 }
 
 a custom-typography {
