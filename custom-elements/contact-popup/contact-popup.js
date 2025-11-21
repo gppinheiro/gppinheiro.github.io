@@ -2,11 +2,51 @@ class CustomContactPopup extends HTMLElement {
     constructor() {
         super();
         this.hide = this.hide.bind(this);
+        this.updateTheme = this.updateTheme.bind(this);
         this.attachShadow({ mode: 'open' });
+        this.themeObserver = null;
     }
 
     connectedCallback() {
         this.render();
+        this.setupThemeObserver();
+        this.updateTheme();
+    }
+
+    disconnectedCallback() {
+        if (this.themeObserver) {
+            this.themeObserver.disconnect();
+        }
+    }
+
+    setupThemeObserver() {
+        // Observe changes to body's class attribute to detect theme changes
+        this.themeObserver = new MutationObserver(() => {
+            this.updateTheme();
+        });
+
+        this.themeObserver.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    }
+
+    updateTheme() {
+        const isLightMode = document.body.classList.contains('light-mode');
+        const popup = this.shadowRoot.querySelector('.popup');
+        const submitButton = this.shadowRoot.querySelector('custom-button');
+
+        if (popup) {
+            if (isLightMode) {
+                popup.classList.add('light-mode');
+            } else {
+                popup.classList.remove('light-mode');
+            }
+        }
+
+        if (submitButton) {
+            submitButton.setAttribute('mode', isLightMode ? 'dark' : 'light');
+        }
     }
 
     render() {
@@ -62,6 +102,7 @@ class CustomContactPopup extends HTMLElement {
     show() {
         this.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        this.updateTheme(); // Ensure theme is current when showing
     }
 
     hide() {

@@ -1,3 +1,4 @@
+@import './../shared/constants.css';
 @import './../typography/typography.css';
 
 :host {
@@ -25,7 +26,7 @@
 }
 
 .popup {
-    background-color: var(--white);
+    background-color: var(--bg-primary);
     width: 100%;
     max-width: 600px;
     border-radius: 16px;
@@ -54,12 +55,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--zinc-100);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.popup-header custom-typography {
+    color: var(--text-primary);
 }
 
 .popup-header custom-icon {
     cursor: pointer;
     transition: transform 0.2s;
+    color: var(--text-primary);
 }
 
 .popup-header custom-icon:hover {
@@ -74,7 +80,7 @@
 }
 
 .popup-content>custom-typography {
-    color: var(--zinc-500);
+    color: var(--text-secondary);
 }
 
 .form-group {
@@ -92,11 +98,11 @@ select {
     width: 100%;
     padding: 12px 16px;
     border-radius: 8px;
-    border: 1px solid var(--zinc-200);
-    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
     font-family: inherit;
     font-size: 1rem;
-    color: var(--zinc-800);
+    color: var(--text-primary);
     appearance: none;
     cursor: pointer;
     transition: border-color 0.2s;
@@ -104,13 +110,13 @@ select {
 
 select:focus {
     outline: none;
-    border-color: var(--primary-color, #000);
+    border-color: var(--text-primary);
 }
 
 .select-wrapper::after {
     content: '▼';
     font-size: 0.8rem;
-    color: var(--zinc-500);
+    color: var(--text-secondary);
     position: absolute;
     right: 16px;
     top: 50%;
@@ -128,6 +134,41 @@ select:focus {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+/* Light mode overrides */
+.popup.light-mode {
+    background-color: var(--white);
+}
+
+.popup.light-mode .popup-header {
+    border-bottom-color: var(--zinc-300);
+}
+
+.popup.light-mode .popup-header custom-typography {
+    color: var(--black);
+}
+
+.popup.light-mode .popup-header custom-icon {
+    color: var(--black);
+}
+
+.popup.light-mode .popup-content>custom-typography {
+    color: var(--zinc-500);
+}
+
+.popup.light-mode select {
+    background-color: var(--white);
+    border-color: var(--zinc-300);
+    color: var(--zinc-800);
+}
+
+.popup.light-mode select:focus {
+    border-color: var(--black);
+}
+
+.popup.light-mode .select-wrapper::after {
+    color: var(--zinc-500);
 }
 
 @media screen and (max-width: 600px) {
