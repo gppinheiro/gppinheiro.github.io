@@ -13,11 +13,10 @@ body {
 }
 
 main {
-  background-color: var(--white);
   position: relative;
   z-index: 1;
   border-radius: 0 0 32px 32px;
-  /* Optional: rounded bottom for main content */
+  background-color: var(--black);
 }
 
 section {

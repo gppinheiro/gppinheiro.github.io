@@ -13,13 +13,17 @@
 }
 
 #intro #intro-content custom-typography[type="p"] {
-    color: var(--zinc-500);
+    color: var(--zinc-300);
 }
 
 #intro #intro-content #intro-titles {
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+#intro #intro-content #intro-titles custom-typography {
+    color: var(--white);
 }
 
 #intro #intro-content #intro-media {

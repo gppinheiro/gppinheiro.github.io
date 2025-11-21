@@ -1,5 +1,4 @@
 .cards {
-    background-color: var(--black);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -38,7 +37,7 @@ custom-project-popup .project-tool {
     align-items: center;
     gap: 8px;
 }
-  
+
 custom-project-popup custom-typography[type="label"] {
     color: var(--zinc-800);
 }

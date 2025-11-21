@@ -1,5 +1,5 @@
 #about-me {
-    padding-top: calc(4% + 51px);
+    padding-top: calc(4% + 100px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -28,12 +28,12 @@
     gap: 24px;
 }
 
-#about-me #about-me-text #about-me-title {
-    margin-bottom: 20px;
+#about-me #about-me-text #about-me-title custom-typography[type="title"] {
+    color: var(--white);
 }
 
 #about-me #about-me-text custom-typography[type="p"] {
-    color: var(--zinc-500);
+    color: var(--zinc-300);
 }
 
 @media screen and (max-width: 768px) {

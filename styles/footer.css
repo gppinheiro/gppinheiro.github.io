@@ -1,6 +1,5 @@
 footer {
     padding: 64px 5% 32px;
-    background-color: var(--black);
     display: flex;
     flex-direction: column;
     gap: 64px;
