@@ -20,7 +20,7 @@ class CustomContactPopup extends HTMLElement {
                     </div>
 
                     <div class="popup-content">
-                        <custom-typography type="p" style="color: var(--zinc-500); margin-bottom: 24px;">
+                        <custom-typography type="p">
                             Interested in working together? We should queue up a time to chat.
                         </custom-typography>
 
@@ -54,7 +54,6 @@ class CustomContactPopup extends HTMLElement {
             if (e.target.id === 'overlay') this.hide();
         });
 
-        // Prevent click propagation from popup to overlay
         this.shadowRoot.querySelector('.popup').addEventListener('click', (e) => {
             e.stopPropagation();
         });
@@ -62,12 +61,12 @@ class CustomContactPopup extends HTMLElement {
 
     show() {
         this.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
     }
 
     hide() {
         this.style.display = 'none';
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = '';
     }
 }
 

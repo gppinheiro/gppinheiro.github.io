@@ -73,6 +73,10 @@
     gap: 24px;
 }
 
+.popup-content>custom-typography {
+    color: var(--zinc-500);
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -103,7 +107,6 @@ select:focus {
     border-color: var(--primary-color, #000);
 }
 
-/* Custom arrow for select */
 .select-wrapper::after {
     content: '▼';
     font-size: 0.8rem;
@@ -119,6 +122,12 @@ select:focus {
     margin-top: 16px;
     display: flex;
     justify-content: flex-end;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 @media screen and (max-width: 600px) {
