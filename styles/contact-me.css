@@ -15,7 +15,17 @@
     text-align: center;
     padding: 80px 24px;
     border-radius: 64px;
-    background-color: var(--white);
+    background-color: var(--bg-secondary);
+}
+
+#contact-content custom-typography[type="title"] {
+    text-align: center;
+    color: var(--text-primary);
+}
+
+#contact-content custom-typography[type="h2"] {
+    text-align: center;
+    color: var(--text-secondary);
 }
 
 #contact-actions {

@@ -78,24 +78,29 @@
             <img src="./assets/guilherme.jpeg" alt="guilherme-picture">
         </section>
 
-        <section id="projects" class="cards">
+        <section id="projects" class="cards-projects">
             <custom-typography type="title" weight="extra-bold">Projects</custom-typography>
 
-            <custom-project id="project-01" setImage="right" number="1" imageUrl="./assets/projects/project_01.png"
-                title="Guilherme's Website">
-                A personal website to showcase my projects and experiences.
+            <custom-project id="project-04" imageUrl="./assets/projects/project_04.jpg" title="Wattra"
+                status="in-progress">
+                Wattra accelerates the transition to low-carbon digital infrastructure by turning energy from a cost
+                into an intelligent asset.
             </custom-project>
-            <custom-project-popup id="popup-project-01" projectName="Guilherme's Website">
+
+            <custom-project id="project-03" imageUrl="./assets/projects/project_03.png" title="Post2Pod" status="done">
+                Learn by listening, leave the reading for us.
+            </custom-project>
+            <custom-project-popup id="popup-project-03" projectName="Post2Pod">
                 <custom-typography slot="project-links" type="p">
-                    Link: <custom-a href="">Website</custom-a>
+                    Link: <custom-a href="https://post2pod.com">Website</custom-a>
                 </custom-typography>
                 <custom-typography slot="project-links" type="p">
-                    Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
+                    Developed By: Post2Pod Team
                 </custom-typography>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/css.svg"></custom-icon>
-                    <custom-typography type="label">CSS</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
+                    <custom-typography type="label">AI</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
@@ -104,45 +109,43 @@
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
-                    <custom-typography type="label">Git</custom-typography>
-                </span>
-
-                <span slot="project-tools" class="project-tool">
                     <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
                     <custom-typography type="label">Github</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/html.svg"></custom-icon>
-                    <custom-typography type="label">HTML</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
+                    <custom-typography type="label">GC</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/javascript.svg"></custom-icon>
-                    <custom-typography type="label">Javascript</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/rollup.svg"></custom-icon>
-                    <custom-typography type="label">Rollup</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
+                    <custom-typography type="label">React</custom-typography>
                 </span>
 
-                <custom-typography slot="project-description" type="label">Developed a personal portfolio website from
-                    scratch to exhibit my projects, professional experiences, and technical
-                    proficiencies.</custom-typography>
-                <custom-typography slot="project-description" type="label">Fully designed with Figma, utilizing its
-                    powerful
-                    tools to prototype and refine the website's aesthetics and user experience.</custom-typography>
-                <custom-typography slot="project-description" type="label">Implemented responsive design principles to
-                    ensure the website's compatibility with various devices and screen sizes.</custom-typography>
-                <custom-typography slot="project-description" type="label">Created crafted custom elements to create
-                    uniques
-                    elements across the website.</custom-typography>
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/vite.svg"></custom-icon>
+                    <custom-typography type="label">Vite</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">Tired of endless reading lists? Let us do the
+                    reading for you. With Post2Pod, transform news articles, blog posts, and newsletters into podcast
+                    episodes that you can enjoy on your favorite listening app.</custom-typography>
+                <custom-typography slot="project-description" type="label">For business, we offer a white label
+                    solution,
+                    allowing you to create your own podcast network in our B2B portal.</custom-typography>
+                <custom-typography slot="project-description" type="label">For users, we offer a free google extension
+                    to
+                    easily convert articles to podcasts.</custom-typography>
             </custom-project-popup>
 
-            <custom-project id="project-02" setImage="left" number="2" imageUrl="./assets/projects/project_02.png"
-                title="Stock Analysis Algorithm">
+            <custom-project id="project-02" imageUrl="./assets/projects/project_02.png" title="Stock Analysis Algorithm"
+                status="done">
                 Algorithm that is segmented into 4 parts: Stock Analysis System, Recommendation Engine, Economic Factors
                 Monitor and Identity Service.
             </custom-project>
@@ -328,21 +331,21 @@
                     robust, albeit complex, solution pays off in the long run.</custom-typography>
             </custom-project-popup>
 
-            <custom-project id="project-03" setImage="right" number="3" imageUrl="./assets/projects/project_03.png"
-                title="Post2Pod">
-                Learn by listening, leave the reading for us.
+            <custom-project id="project-01" imageUrl="./assets/projects/project_01.png" title="Guilherme's Website"
+                status="done">
+                A personal website to showcase my projects and experiences.
             </custom-project>
-            <custom-project-popup id="popup-project-03" projectName="Post2Pod">
+            <custom-project-popup id="popup-project-01" projectName="Guilherme's Website">
                 <custom-typography slot="project-links" type="p">
-                    Link: <custom-a href="https://post2pod.com">Website</custom-a>
+                    Link: <custom-a href="">Website</custom-a>
                 </custom-typography>
                 <custom-typography slot="project-links" type="p">
-                    Developed By: Post2Pod Team
+                    Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
                 </custom-typography>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
-                    <custom-typography type="label">AI</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/css.svg"></custom-icon>
+                    <custom-typography type="label">CSS</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
@@ -351,49 +354,50 @@
                 </span>
 
                 <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
+                    <custom-typography type="label">Git</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
                     <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
                     <custom-typography type="label">Github</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
-                    <custom-typography type="label">GC</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/html.svg"></custom-icon>
+                    <custom-typography type="label">HTML</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
-                    <custom-typography type="label">Python</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/javascript.svg"></custom-icon>
+                    <custom-typography type="label">Javascript</custom-typography>
                 </span>
 
                 <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
-                    <custom-typography type="label">React</custom-typography>
+                    <custom-icon size="xl" img="./assets/icons/rollup.svg"></custom-icon>
+                    <custom-typography type="label">Rollup</custom-typography>
                 </span>
 
-                <span slot="project-tools" class="project-tool">
-                    <custom-icon size="xl" img="./assets/icons/vite.svg"></custom-icon>
-                    <custom-typography type="label">Vite</custom-typography>
-                </span>
-
-                <custom-typography slot="project-description" type="label">Tired of endless reading lists? Let us do the
-                    reading for you. With Post2Pod, transform news articles, blog posts, and newsletters into podcast
-                    episodes that you can enjoy on your favorite listening app.</custom-typography>
-                <custom-typography slot="project-description" type="label">For business, we offer a white label
-                    solution,
-                    allowing you to create your own podcast network in our B2B portal.</custom-typography>
-                <custom-typography slot="project-description" type="label">For users, we offer a free google extension
-                    to
-                    easily convert articles to podcasts.</custom-typography>
+                <custom-typography slot="project-description" type="label">Developed a personal portfolio website from
+                    scratch to exhibit my projects, professional experiences, and technical
+                    proficiencies.</custom-typography>
+                <custom-typography slot="project-description" type="label">Fully designed with Figma, utilizing its
+                    powerful
+                    tools to prototype and refine the website's aesthetics and user experience.</custom-typography>
+                <custom-typography slot="project-description" type="label">Implemented responsive design principles to
+                    ensure the website's compatibility with various devices and screen sizes.</custom-typography>
+                <custom-typography slot="project-description" type="label">Created crafted custom elements to create
+                    uniques
+                    elements across the website.</custom-typography>
             </custom-project-popup>
         </section>
 
         <section id="contact-me">
             <div id="contact-content">
-                <custom-typography type="title" weight="extra-bold" style="text-align: center;">Have a project in
+                <custom-typography type="title" weight="extra-bold">Have a project in
                     mind?</custom-typography>
-                <custom-typography type="h2" style="text-align: center; color: var(--zinc-500);">Let's build something
-                    real
-                    together.</custom-typography>
+                <custom-typography type="h2">Let's build something
+                    real together.</custom-typography>
                 <div id="contact-actions">
                     <custom-button size="l" text="Get In Touch" onclick="openContactPopup()"></custom-button>
                 </div>

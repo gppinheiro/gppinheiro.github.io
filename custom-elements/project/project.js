@@ -1,16 +1,14 @@
 export default class Project extends HTMLElement {
     static get observedAttributes() {
-        return ['id','setImage','number','imageUrl','title','onclickFunction'];
+        return ['id', 'imageUrl', 'title', 'status'];
     }
 
     constructor() {
         super();
         this.id = this.getAttribute('id') || '';
-        this.setImage = this.getAttribute('setImage') || 'right';
-        this.number = this.getAttribute('number') || '0';
         this.imageUrl = this.getAttribute('imageUrl') || '';
         this.title = this.getAttribute('title') || '';
-        this.onclickFunction = this.getAttribute('onclickFunction') || '';
+        this.status = this.getAttribute('status') || '';
         this.attachShadow({ mode: 'open' });
     }
 
@@ -21,51 +19,72 @@ export default class Project extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="./custom-elements/project/project.css">
-            <div class="container">
-                ${this.renderContainer()}
+            <div class="card">
+                ${this.renderStatusLabel()}
+                ${this.renderExpandIcon()}
+                ${this.renderImage()}
+                ${this.renderContent()}
             </div>
         `;
 
-        this.shadowRoot.querySelector('custom-icon').addEventListener('click', this.openPopup.bind(this));
+        const expandIcon = this.shadowRoot.querySelector('.expand-icon');
+        if (expandIcon) {
+            expandIcon.addEventListener('click', this.openPopup.bind(this));
+        }
     }
 
-    renderContainer() {
-        if(this.setImage === 'left') {
-            return `
-                ${this.renderImage()}
-                ${this.renderContent()}
-            `;
+    renderStatusLabel() {
+        if (!this.status) return '';
+
+        const statusLabels = {
+            'in-progress': 'In Progress',
+            'on-hold': 'On Hold',
+            'done': 'Done'
+        };
+
+        const label = statusLabels[this.status] || this.status;
+
+        return `
+            <div class="status-badge status-${this.status}">
+                <custom-typography type="label">${label}</custom-typography>
+            </div>
+        `;
+    }
+
+    renderExpandIcon() {
+        // Don't show expand icon for in-progress projects
+        if (this.status === 'in-progress') {
+            return '';
         }
 
         return `
-                ${this.renderContent()}
-                ${this.renderImage()}
-            `;
+            <div class="expand-icon">
+                <custom-icon size="m">open_in_full</custom-icon>
+            </div>
+        `;
     }
 
     renderImage() {
         return `
             <div class="project-image">
-                <img class="${this.setImage}" src="${this.imageUrl}">
+                <img src="${this.imageUrl}" alt="${this.title}">
             </div>
         `;
     }
 
     renderContent() {
         return `
-            <div class="content ${this.setImage}">
-                <custom-typography type="title" weight="extra-bold">0${this.number}</custom-typography>
-                <custom-typography type="h2" weight="bold">${this.title}</custom-typography>
+            <div class="content">
+                <custom-typography type="h3" weight="bold">${this.title}</custom-typography>
                 <custom-typography type="p">
                     <slot></slot>
                 </custom-typography>
-                <custom-icon size="xl">read_more</custom-icon>
             </div>
         `;
     }
 
     openPopup() {
-        if(this.id !== '') {
+        if (this.id !== '') {
             const popup = document.getElementById(`popup-${this.id}`);
             popup.show();
         }

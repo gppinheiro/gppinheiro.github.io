@@ -1,69 +1,123 @@
 @import './../icon/icon.css';
 @import './../typography/typography.css';
 
-.container {
+.card {
+    position: relative;
     width: 100%;
-    max-width: 1208px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 48px;
-    padding: 24px;
-    background-color: var(--black);
+    min-height: 450px;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.container .project-image {
-    justify-self: center;
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Status Badge */
+.status-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    z-index: 2;
+    font-weight: 600;
+}
+
+.status-badge custom-typography {
+    color: var(--white);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-in-progress {
+    background-color: #3b82f6;
+    /* Blue */
+}
+
+.status-on-hold {
+    background-color: #ef4444;
+    /* Red */
+}
+
+.status-done {
+    background-color: #10b981;
+    /* Green */
+}
+
+/* Expand Icon */
+.expand-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    max-width: calc(100% - 24px - 24px);
-    max-height: 420px;
-    border-radius: 4px;
-}
-
-.container .project-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.container .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-}
-
-.container .content custom-typography[type='title'],
-.container .content custom-typography[type='h2'],
-.container .content custom-icon {
-    color: var(--white);
-}
-
-.container .content custom-typography[type='p'] {
-    color: var(--zinc-500);
-}
-
-.container .content custom-icon {
+    z-index: 2;
+    transition: background-color 0.2s ease;
     cursor: pointer;
 }
 
+.expand-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.expand-icon custom-icon {
+    color: var(--white);
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background-color: var(--zinc-800);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.content custom-typography[type='h3'] {
+    color: var(--text-primary);
+}
+
+.content custom-typography[type='p'] {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 @media screen and (max-width: 576px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-gap: 0;
-        padding: 0;
-        gap: 24px;
+    .card {
+        border-radius: 8px;
     }
 
-    .container #project-image {
-        width: 100%;
-        max-width: unset;
-        order: 1;
+    .project-image {
+        height: 200px;
     }
 
-    .container .content {
-        order: 2;
+    .content {
+        padding: 20px;
     }
 }

@@ -17,6 +17,7 @@
 
     /* Semantic Colors */
     --bg-primary: var(--black);
+    --bg-secondary: var(--zinc-800);
     --text-primary: var(--white);
     --text-secondary: var(--zinc-300);
     --project-label-color: var(--zinc-800);
@@ -24,6 +25,7 @@
     --footer-bg: transparent;
     --icon-color: var(--white);
     --line-color: var(--zinc-500);
+    --border-color: var(--zinc-500);
 
     /* Typography */
     --font-family: 'Open Sans', sans-serif;
@@ -67,9 +69,11 @@
 
 body.light-mode {
     --bg-primary: var(--white);
+    --bg-secondary: var(--zinc-100);
     --text-primary: var(--black);
     --text-secondary: var(--zinc-500);
     --header-bg: rgba(255, 255, 255, 0.9);
     --icon-color: var(--black);
     --project-label-color: var(--zinc-800);
+    --border-color: var(--zinc-300);
 }

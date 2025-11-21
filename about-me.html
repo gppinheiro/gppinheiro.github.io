@@ -13,7 +13,7 @@
     <script type="module" src="./dist/index.js"></script>
 </head>
 
-<body>
+<body class="dark-mode">
     <main>
         <header>
             <custom-logo onclick="goTo('./index.html', false)"></custom-logo>
@@ -22,9 +22,11 @@
                 <custom-a href="./index.html#projects" type="text">Projects</custom-a>
                 <custom-a href="#contact-me" type="text">Contact Me</custom-a>
             </div>
-            <custom-button id="button-cv" icon="download" size="m" text="CV"
-                onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
-            <custom-icon id="theme-icon" size="m" onclick="toggleTheme()"></custom-icon>
+            <div id="right-menu">
+                <custom-button id="button-cv" icon="download" size="m" text="CV"
+                    onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
+                <custom-icon id="theme-icon" size="m" onclick="toggleTheme()">light_mode</custom-icon>
+            </div>
             <div id="burger-menu">
                 <custom-icon size="xl">menu</custom-icon>
             </div>
@@ -34,7 +36,7 @@
                 <custom-a href="#contact-me" type="text" onclick="closeMenu()">Contact Me</custom-a>
                 <custom-button icon="download" size="m" text="CV"
                     onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
-                <custom-icon id="theme-icon-mobile" size="m" onclick="toggleTheme()"></custom-icon>
+                <custom-icon id="theme-icon-mobile" size="m" onclick="toggleTheme()">light_mode</custom-icon>
             </div>
         </header>
 
