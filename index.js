@@ -28,22 +28,41 @@ function updateFooterReveal() {
 }
 
 window.addEventListener('resize', updateFooterReveal);
-// Call initially
 updateFooterReveal();
 
 let ticking = false;
 
-// Scroll listener for footer reveal or other future animations
 window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
-            // updateContactAnimation(); // Removed
             ticking = false;
         });
         ticking = true;
     }
 });
 
-// updateContactAnimation removed as requested
-// Ensure footer reveal is calculated after layout
-window.addEventListener('load', updateFooterReveal);
+window.addEventListener('load', () => {
+    updateFooterReveal();
+
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        icons.forEach(icon => icon.textContent = 'dark_mode');
+    }
+});
+
+window.toggleTheme = () => {
+    const body = document.body;
+    body.classList.toggle('light-mode');
+    const isLightMode = body.classList.contains('light-mode');
+
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+
+    const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+    icons.forEach(icon => {
+        icon.textContent = isLightMode ? 'dark_mode' : 'light_mode';
+    });
+};

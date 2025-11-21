@@ -13,7 +13,7 @@
 }
 
 #intro #intro-content custom-typography[type="p"] {
-    color: var(--zinc-300);
+    color: var(--text-secondary);
 }
 
 #intro #intro-content #intro-titles {
@@ -23,7 +23,7 @@
 }
 
 #intro #intro-content #intro-titles custom-typography {
-    color: var(--white);
+    color: var(--text-primary);
 }
 
 #intro #intro-content #intro-media {

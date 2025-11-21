@@ -9,16 +9,16 @@
 
 body {
   margin: 0;
-  background-color: var(--black);
+  background-color: var(--bg-primary);
 }
 
 main {
   position: relative;
   z-index: 1;
   border-radius: 0 0 32px 32px;
-  background-color: var(--black);
+  background-color: var(--bg-primary);
 }
 
 section {
-  padding: 6% 10%;
+  padding: 4% 10%;
 }

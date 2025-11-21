@@ -10,7 +10,7 @@
 }
 
 .cards custom-typography[type="title"] {
-    color: var(--white);
+    color: var(--text-primary);
     margin-bottom: 20px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .cards.light custom-typography[type="title"] {
-    color: var(--black);
+    color: var(--bg-primary);
 }
 
 .cards ul {
@@ -39,5 +39,5 @@ custom-project-popup .project-tool {
 }
 
 custom-project-popup custom-typography[type="label"] {
-    color: var(--zinc-800);
+    color: var(--project-label-color);
 }

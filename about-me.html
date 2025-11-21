@@ -24,6 +24,7 @@
             </div>
             <custom-button id="button-cv" icon="download" size="m" text="CV"
                 onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
+            <custom-icon id="theme-icon" size="m" onclick="toggleTheme()"></custom-icon>
             <div id="burger-menu">
                 <custom-icon size="xl">menu</custom-icon>
             </div>
@@ -33,6 +34,7 @@
                 <custom-a href="#contact-me" type="text" onclick="closeMenu()">Contact Me</custom-a>
                 <custom-button icon="download" size="m" text="CV"
                     onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
+                <custom-icon id="theme-icon-mobile" size="m" onclick="toggleTheme()"></custom-icon>
             </div>
         </header>
 
@@ -45,7 +47,8 @@
                     <custom-typography type="title">About </custom-typography>
                     <custom-typography type="title" weight="extra-bold">Me</custom-typography>
                 </div>
-                <custom-typography type="p">I'm Guilherme Pinheiro, an engineer driven by the desire to make impact
+                <custom-typography mode="light" type="p">I'm Guilherme Pinheiro, an engineer driven by the desire to
+                    make impact
                     through
                     technology. My journey in engineering is fueled by a deep-seated passion for innovation and the
                     transformative role engineers play in shaping the future. I approach every challenge with a
@@ -174,44 +177,40 @@
             </div>
             <div class="footer-right">
                 <div class="footer-column">
-                    <custom-typography type="h4" style="color: var(--zinc-500);">Navigation</custom-typography>
+                    <custom-typography type="h4">Navigation</custom-typography>
                     <custom-a href="./index.html">
-                        <custom-typography type="h4" style="color: var(--white);">
+                        <custom-typography type="h4">
                             Home
                         </custom-typography>
                     </custom-a>
                     <custom-a href="./index.html#projects">
-                        <custom-typography type="h4" style="color: var(--white);">
+                        <custom-typography type="h4">
                             Projects
                         </custom-typography>
                     </custom-a>
                     <custom-a href="#contact-me">
-                        <custom-typography type="h4" style="color: var(--white);">
+                        <custom-typography type="h4">
                             Contact Me
                         </custom-typography>
                     </custom-a>
                 </div>
                 <div class="footer-column">
-                    <custom-typography type="h4" style="color: var(--zinc-500);">Social</custom-typography>
+                    <custom-typography type="h4">Social</custom-typography>
                     <div class="footer-column-icons">
-                        <custom-a type="icon" onclick="goTo('mailto:pinheiropgui@gmail.com', false)">
+                        <div class="footer-column-icons">
                             <custom-icon size="m" img="./assets/icons/google.svg"
-                                style="filter: brightness(0) invert(1);"></custom-icon>
-                        </custom-a>
-                        <custom-a type="icon" onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">
+                                onclick="goTo('mailto:pinheiropgui@gmail.com', false)"></custom-icon>
                             <custom-icon size="m" img="./assets/icons/linkedin.svg"
-                                style="filter: brightness(0) invert(1);"></custom-icon>
-                        </custom-a>
-                        <custom-a type="icon" onclick="goTo('https://github.com/gppinheiro')">
+                                onclick="goTo('https://www.linkedin.com/in/gppinheiro/')"></custom-icon>
                             <custom-icon size="m" img="./assets/icons/github.svg"
-                                style="filter: brightness(0) invert(1);"></custom-icon>
-                        </custom-a>
+                                onclick="goTo('https://github.com/gppinheiro')"></custom-icon>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <custom-typography type="label" style="color: var(--zinc-500);">© 2024, Guilherme Pinheiro. All rights
+            <custom-typography type="label">© 2024, Guilherme Pinheiro. All rights
                 reserved.</custom-typography>
         </div>
     </footer>

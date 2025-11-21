@@ -29,11 +29,11 @@
 }
 
 #about-me #about-me-text #about-me-title custom-typography[type="title"] {
-    color: var(--white);
+    color: var(--text-primary);
 }
 
 #about-me #about-me-text custom-typography[type="p"] {
-    color: var(--zinc-300);
+    color: var(--text-secondary);
 }
 
 @media screen and (max-width: 768px) {

@@ -12,7 +12,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--header-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -24,11 +24,23 @@ header custom-logo {
     cursor: pointer;
 }
 
+header #theme-icon,
+header #theme-icon-mobile {
+    cursor: pointer;
+}
+
 header #menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 32px;
+}
+
+header #right-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
 }
 
 header #burger-menu {

@@ -15,6 +15,16 @@
     --success: #48826e;
     --info: #186fb6;
 
+    /* Semantic Colors */
+    --bg-primary: var(--black);
+    --text-primary: var(--white);
+    --text-secondary: var(--zinc-300);
+    --project-label-color: var(--zinc-800);
+    --header-bg: rgba(255, 255, 255, 0.7);
+    --footer-bg: transparent;
+    --icon-color: var(--white);
+    --line-color: var(--zinc-500);
+
     /* Typography */
     --font-family: 'Open Sans', sans-serif;
     --font-weight-regular: 400;
@@ -41,7 +51,7 @@
     --font-size-xl: 32px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     :root {
         --font-size-title: 28px;
         --font-size-h2: 24px;
@@ -53,4 +63,13 @@
         --line-height-h2: 24px;
     }
 
+}
+
+body.light-mode {
+    --bg-primary: var(--white);
+    --text-primary: var(--black);
+    --text-secondary: var(--zinc-500);
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --icon-color: var(--black);
+    --project-label-color: var(--zinc-800);
 }

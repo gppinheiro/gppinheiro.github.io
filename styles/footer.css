@@ -34,18 +34,39 @@ footer {
     gap: 12px;
 }
 
-.footer-column-icons {
+.footer-column custom-typography {
+    color: var(--text-secondary);
+}
+
+.footer-column custom-a custom-typography {
+    color: var(--text-primary);
+}
+
+.footer-column .footer-column-icons {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     align-items: center;
+    cursor: pointer;
+}
+
+body.dark-mode .footer-column .footer-column-icons custom-icon {
+    filter: brightness(0) invert(1);
+}
+
+body.light-mode .footer-column .footer-column-icons custom-icon {
+    filter: none;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--zinc-800);
+    border-top: 1px solid var(--line-color);
     padding-top: 32px;
     display: flex;
     justify-content: center;
+}
+
+.footer-bottom custom-typography {
+    color: var(--text-secondary);
 }
 
 footer custom-logo {

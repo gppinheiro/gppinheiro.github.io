@@ -14,14 +14,14 @@ img {
 }
 
 .light custom-typography {
-    color: var(--white);
+    color: var(--text-primary);
 }
 
 .dark custom-typography {
     color: var(--black);
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     img {
         width: 30px;
         height: 40px;
