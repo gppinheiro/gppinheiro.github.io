@@ -26,6 +26,22 @@ window.openNmbrsPopup = () => {
     }
 };
 
+window.openChatPopup = () => {
+    const popup = document.querySelector('custom-chat-popup');
+    if (popup && typeof popup.show === 'function') {
+        popup.show();
+    } else {
+        console.error('Chat popup not found or not ready');
+    }
+};
+
+window.closeChatPopup = () => {
+    const popup = document.querySelector('custom-chat-popup');
+    if (popup && typeof popup.hide === 'function') {
+        popup.hide();
+    }
+};
+
 function updateFooterReveal() {
     const footer = document.querySelector('footer');
     const main = document.querySelector('main');

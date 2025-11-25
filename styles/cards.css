@@ -40,6 +40,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .cards-projects>custom-typography[type="title"] {
@@ -51,6 +53,8 @@
 
 .cards-projects custom-project {
     width: 100%;
+    max-width: 450px;
+    justify-self: center;
 }
 
 custom-project-popup .project-tool {

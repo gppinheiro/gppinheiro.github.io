@@ -1,5 +1,7 @@
 import './a/a.js';
 import './button/button.js';
+import './chat-bubble/chat-bubble.js';
+import './chat-popup/chat-popup.js';
 import './experience/experience.js'
 import './icon/icon.js'
 import './input/input.js';

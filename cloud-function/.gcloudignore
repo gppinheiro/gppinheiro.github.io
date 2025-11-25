@@ -1,0 +1,16 @@
+# This file specifies files that are not uploaded to Google Cloud
+# See https://cloud.google.com/functions/docs/writing#directory-structure
+
+.gcloudignore
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.md
+test_*.py
+commands.md
