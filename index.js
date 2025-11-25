@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
-    const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+    const icons = document.querySelectorAll('#theme-icon');
 
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
@@ -70,7 +70,7 @@ window.toggleTheme = () => {
 
     localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
 
-    const icons = document.querySelectorAll('#theme-icon, #theme-icon-mobile');
+    const icons = document.querySelectorAll('#theme-icon');
     icons.forEach(icon => {
         icon.textContent = isLightMode ? 'dark_mode' : 'light_mode';
     });

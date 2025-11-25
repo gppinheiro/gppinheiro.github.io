@@ -24,8 +24,7 @@ header custom-logo {
     cursor: pointer;
 }
 
-header #theme-icon,
-header #theme-icon-mobile {
+header #theme-icon {
     cursor: pointer;
 }
 
