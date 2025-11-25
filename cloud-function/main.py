@@ -19,11 +19,12 @@ if not GEMINI_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 
 model = genai.GenerativeModel(
-    model_name='gemini-1.5-flash',
+    model_name='models/gemini-flash-latest',
+    system_instruction=get_system_prompt(),
     generation_config={
         'temperature': 0.7,
         'top_p': 0.95,
-        'top_k': 40,
+        'top_k':40,
         'max_output_tokens': 1024,
     }
 )
@@ -65,13 +66,7 @@ def generate_ai_response(user_message, conversation_history):
             history=format_conversation_history(conversation_history)
         )
         
-        system_prompt = get_system_prompt()
-        full_prompt = f"{system_prompt}\n\nUser question: {user_message}"
-        
-        if len(conversation_history) == 0:
-            response = chat.send_message(full_prompt)
-        else:
-            response = chat.send_message(user_message)
+        response = chat.send_message(user_message)
         
         return response.text
         
@@ -80,7 +75,6 @@ def generate_ai_response(user_message, conversation_history):
         return "I apologize, but I'm having trouble processing your request right now. Please try again or reach out to me directly at pinheiropgui@gmail.com."
 
 
-@cross_origin(origins=ALLOWED_ORIGIN)
 def chat(request: Request):
     """
     Cloud Function entry point for chat endpoint
@@ -101,9 +95,21 @@ def chat(request: Request):
     }
     """
     
+    origin = request.headers.get('Origin', '')
+    allowed_origins = [
+        'https://guilhermepinheiro.me',
+        'http://localhost:8000',
+        'http://127.0.0.1:8000'
+    ]
+    
+    if origin in allowed_origins:
+        allowed_origin = origin
+    else:
+        allowed_origin = 'https://guilhermepinheiro.me' # Default or fallback origin
+    
     if request.method == 'OPTIONS':
         headers = {
-            'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+            'Access-Control-Allow-Origin': allowed_origin,
             'Access-Control-Allow-Methods': 'POST',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Max-Age': '3600'
@@ -111,12 +117,12 @@ def chat(request: Request):
         return ('', 204, headers)
     
     headers = {
-        'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
+        'Access-Control-Allow-Origin': allowed_origin,
         'Content-Type': 'application/json'
     }
     
     try:
-        request_json = request.get_json(silent=True)
+        request_json = request.get_json(force=True)
         
         if not request_json:
             return (

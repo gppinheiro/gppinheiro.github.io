@@ -187,7 +187,7 @@ class CustomChatPopup extends HTMLElement {
                 },
                 body: JSON.stringify({
                     message: message,
-                    history: this.conversationHistory.slice(-10)
+                    history: this.conversationHistory.slice(0, -1).slice(-10)
                 })
             });
 

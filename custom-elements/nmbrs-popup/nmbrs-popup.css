@@ -55,6 +55,7 @@
     }
 }
 
+/* Sticky Header */
 .popup-header {
     display: flex;
     justify-content: space-between;
@@ -92,6 +93,7 @@
     transform: rotate(90deg);
 }
 
+/* Timeline Container */
 .timeline-container {
     position: relative;
     padding: 1rem 0;
@@ -100,6 +102,7 @@
     gap: 2rem;
 }
 
+/* Vertical Line */
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -126,10 +129,12 @@
     }
 }
 
+/* Timeline Dot */
 .timeline-marker {
     position: absolute;
     left: 11px;
     top: 24px;
+    /* Align with title */
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -190,6 +195,7 @@
     margin-bottom: 0.25rem;
 }
 
+/* Scrollbar styling */
 .popup::-webkit-scrollbar {
     width: 8px;
 }
@@ -209,6 +215,7 @@
     background: var(--text-primary);
 }
 
+/* Desktop Layout */
 @media (min-width: 768px) {
     .timeline-container::before {
         left: 50%;
@@ -231,16 +238,22 @@
         text-align: left;
     }
 
+    /* Marker positioning for desktop */
     .timeline-marker {
         left: 100%;
+        /* For odd items (left side), marker is at the right edge */
         margin-left: -11px;
+        /* Center it (20px width / 2 + 1px border adjustment) */
         top: 24px;
         transform: none;
+        /* Remove previous transform */
     }
 
     .timeline-item:nth-child(even) .timeline-marker {
         left: 0;
+        /* For even items (right side), marker is at the left edge */
         margin-left: -11px;
+        /* Center it on the line */
     }
 
     .timeline-item:nth-child(odd) .timeline-content {
@@ -256,6 +269,7 @@
     }
 }
 
+/* Mobile Breakpoints */
 @media screen and (max-width: 768px) {
     .popup {
         width: 95%;
@@ -301,6 +315,7 @@
     }
 }
 
+/* Timeline Image */
 .timeline-image {
     width: 100%;
     height: auto;
@@ -315,6 +330,7 @@
     cursor: pointer;
 }
 
+/* Timeline Images Grid */
 .timeline-images-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
