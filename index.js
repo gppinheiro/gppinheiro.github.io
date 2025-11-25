@@ -17,6 +17,15 @@ window.openContactPopup = () => {
     }
 };
 
+window.openNmbrsPopup = () => {
+    const popup = document.querySelector('custom-nmbrs-popup');
+    if (popup && typeof popup.show === 'function') {
+        popup.show();
+    } else {
+        console.error('Nmbrs popup not found or not ready');
+    }
+};
+
 function updateFooterReveal() {
     const footer = document.querySelector('footer');
     const main = document.querySelector('main');

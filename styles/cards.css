@@ -29,6 +29,12 @@
     margin: 0;
 }
 
+.timeline-button-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .cards-projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
