@@ -136,7 +136,6 @@ select:focus {
     gap: 16px;
 }
 
-/* Light mode overrides */
 .popup.light-mode {
     background-color: var(--white);
 }
