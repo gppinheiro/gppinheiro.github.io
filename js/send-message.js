@@ -1,9 +1,12 @@
-export default function sendMessage() {
-    const name = document.getElementById('contact-name');
-    const email = document.getElementById('contact-email');
-    const company = document.getElementById('contact-company');
-    const message = document.getElementById('contact-message');
-    const submitButton = document.querySelector('#contact-buttons custom-button');
+export default function sendMessage(context = document) {
+    const name = context.getElementById('contact-name');
+    const email = context.getElementById('contact-email');
+    const company = context.getElementById('contact-company');
+    const message = context.getElementById('contact-message');
+    // Handle both Shadow DOM (querySelector) and regular DOM
+    const submitButton = context.querySelector ?
+        context.querySelector('#contact-buttons custom-button') :
+        context.getElementById('contact-buttons').querySelector('custom-button');
 
     if (isFormValid(name, email, message)) {
         const data = {
@@ -14,7 +17,7 @@ export default function sendMessage() {
         };
         submitButton.setAttribute('disabled', 'true');
         showToast("Sending message...", "info");
-        
+
         sendEmail(data)
             .then(() => {
                 showToast("Message sent successfully!");
@@ -34,8 +37,8 @@ function isFormValid(nameEl, emailEl, messageEl) {
     const message = messageEl.value;
 
     if (name === '') {
-        nameEl.setAttribute('status' ,'error');
-        nameEl.setAttribute('statusmessage' ,'Please enter your name.');
+        nameEl.setAttribute('status', 'error');
+        nameEl.setAttribute('statusmessage', 'Please enter your name.');
         isValid = false;
     }
     else {
@@ -43,8 +46,8 @@ function isFormValid(nameEl, emailEl, messageEl) {
     }
 
     if (!isEmailValid(email) || email === '') {
-        emailEl.setAttribute('status' ,'error');
-        emailEl.setAttribute('statusmessage' ,'Please enter a valid email address.');
+        emailEl.setAttribute('status', 'error');
+        emailEl.setAttribute('statusmessage', 'Please enter a valid email address.');
         isValid = false;
     }
     else {
@@ -52,8 +55,8 @@ function isFormValid(nameEl, emailEl, messageEl) {
     }
 
     if (message === '') {
-        messageEl.setAttribute('status' ,'error');
-        messageEl.setAttribute('statusmessage' ,'Please enter a message.');
+        messageEl.setAttribute('status', 'error');
+        messageEl.setAttribute('statusmessage', 'Please enter a message.');
         isValid = false;
     }
     else {
@@ -84,12 +87,12 @@ function sendEmail(data) {
             text: `Person Name: ${data.name}\nPerson Company: ${data.company}\nMessage: ${data.message}`
         })
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response;
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response;
+        });
 }
 
 function showToast(message, type = "success") {
@@ -97,11 +100,11 @@ function showToast(message, type = "success") {
     if (existingToast) {
         document.body.removeChild(existingToast);
     }
-    
+
     const toast = document.createElement('div');
     toast.id = 'toast-notification';
     toast.className = 'toast-notification';
-    
+
     if (type === "success") {
         toast.classList.add('toast-success');
     } else if (type === "error") {
@@ -109,10 +112,10 @@ function showToast(message, type = "success") {
     } else if (type === "info") {
         toast.classList.add('toast-info');
     }
-    
+
     toast.textContent = message;
     document.body.appendChild(toast);
-    
+
     if (type !== "error") {
         setTimeout(() => {
             toast.classList.add('toast-hidden');
@@ -127,7 +130,7 @@ function showToast(message, type = "success") {
         const closeBtn = document.createElement('span');
         closeBtn.textContent = '✕';
         closeBtn.className = 'toast-close-btn';
-        closeBtn.onclick = function() {
+        closeBtn.onclick = function () {
             toast.classList.add('toast-hidden');
             setTimeout(() => {
                 if (toast && toast.parentNode) {
@@ -136,21 +139,21 @@ function showToast(message, type = "success") {
             }, 300);
         };
         toast.appendChild(closeBtn);
-        
+
         let touchStartX = 0;
         let touchEndX = 0;
-        
-        toast.addEventListener('touchstart', function(e) {
+
+        toast.addEventListener('touchstart', function (e) {
             touchStartX = e.changedTouches[0].screenX;
-        }, {passive: true});
-        
-        toast.addEventListener('touchend', function(e) {
+        }, { passive: true });
+
+        toast.addEventListener('touchend', function (e) {
             touchEndX = e.changedTouches[0].screenX;
             handleSwipe();
-        }, {passive: true});
-        
+        }, { passive: true });
+
         function handleSwipe() {
-            if (touchEndX < touchStartX - 50) { 
+            if (touchEndX < touchStartX - 50) {
                 toast.classList.add('toast-hidden');
                 toast.classList.add('toast-slide-left');
                 setTimeout(() => {

@@ -66,21 +66,24 @@ class CustomContactPopup extends HTMLElement {
 
                         <form id="contact-form">
                             <div class="form-group">
-                                <label for="name"><custom-typography type="label" weight="bold">Name</custom-typography></label>
-                                <custom-input id="name" type="text" placeholder="Your Name"></custom-input>
+                                <label for="contact-name"><custom-typography type="label" weight="bold">Name</custom-typography></label>
+                                <custom-input id="contact-name" type="text" placeholder="Your Name"></custom-input>
                             </div>
 
                             <div class="form-group">
-                                <label for="email"><custom-typography type="label" weight="bold">Email</custom-typography></label>
-                                <custom-input id="email" type="email" placeholder="Your Email"></custom-input>
+                                <label for="contact-email"><custom-typography type="label" weight="bold">Email</custom-typography></label>
+                                <custom-input id="contact-email" type="email" placeholder="Your Email"></custom-input>
                             </div>
 
                             <div class="form-group">
-                                <label for="details"><custom-typography type="label" weight="bold">Message</custom-typography></label>
-                                <custom-input id="details" type="textarea" placeholder="Write down your message"></custom-input>
+                                <label for="contact-message"><custom-typography type="label" weight="bold">Message</custom-typography></label>
+                                <custom-input id="contact-message" type="textarea" placeholder="Write down your message"></custom-input>
                             </div>
 
-                            <div class="form-actions">
+                            <!-- Hidden company field to satisfy send-message.js if needed, or we can update send-message.js to handle null -->
+                            <input type="hidden" id="contact-company" value="">
+
+                            <div class="form-actions" id="contact-buttons">
                                 <custom-button size="l" text="Submit" id="submit-btn"></custom-button>
                             </div>
                         </form>
@@ -97,6 +100,18 @@ class CustomContactPopup extends HTMLElement {
         this.shadowRoot.querySelector('.popup').addEventListener('click', (e) => {
             e.stopPropagation();
         });
+
+        // Attach sendMessage with the shadow root context
+        const submitBtn = this.shadowRoot.getElementById('submit-btn');
+        if (submitBtn) {
+            submitBtn.addEventListener('click', () => {
+                if (window.sendMessage) {
+                    window.sendMessage(this.shadowRoot);
+                } else {
+                    console.error('sendMessage function not found on window');
+                }
+            });
+        }
     }
 
     show() {
