@@ -36,6 +36,17 @@
     color: var(--text-secondary);
 }
 
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0px 12px;
+}
+
+.experience-content custom-typography[type="label"] {
+    color: var(--text-secondary);
+}
+
 @media screen and (max-width: 768px) {
     #about-me {
         grid-template-columns: 1fr;
