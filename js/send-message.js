@@ -77,7 +77,9 @@ function isEmailValid(email) {
 }
 
 function sendEmail(data) {
-    return fetch('https://nodejs-server-4olhbqwz7a-ew.a.run.app/send-email', {
+    const cloudFunctionUrl = 'https://us-central1-guilherme-ai-chatbot.cloudfunctions.net/email-sender';
+
+    return fetch(cloudFunctionUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

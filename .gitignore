@@ -3,3 +3,4 @@ node_modules/
 commands.md
 cloud-function/__pycache__/knowledge_base.cpython-313.pyc
 cloud-function/__pycache__/main.cpython-313.pyc
+*.pyc

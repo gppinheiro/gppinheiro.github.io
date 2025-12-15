@@ -75,7 +75,7 @@ brew install google-cloud-sdk
 From the `cloud-function` directory:
 
 ```bash
-cd cloud-function
+cd cloud-function/ai-chatbot
 
 # Deploy function (replace YOUR_API_KEY with actual key)
 gcloud functions deploy guilherme-ai-chat \
