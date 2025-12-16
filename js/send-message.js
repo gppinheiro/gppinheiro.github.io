@@ -1,9 +1,8 @@
 export default function sendMessage(context = document) {
     const name = context.getElementById('contact-name');
     const email = context.getElementById('contact-email');
-    const company = context.getElementById('contact-company');
     const message = context.getElementById('contact-message');
-    // Handle both Shadow DOM (querySelector) and regular DOM
+
     const submitButton = context.querySelector ?
         context.querySelector('#contact-buttons custom-button') :
         context.getElementById('contact-buttons').querySelector('custom-button');
@@ -12,19 +11,17 @@ export default function sendMessage(context = document) {
         const data = {
             name: name.value,
             email: email.value,
-            company: company.value,
             message: message.value
         };
         submitButton.setAttribute('disabled', 'true');
-        showToast("Sending message...", "info");
+        showToast("Sending message...", "info", submitButton);
 
         sendEmail(data)
             .then(() => {
-                showToast("Message sent successfully!");
+                showToast("Message sent successfully!", "success", submitButton);
             })
             .catch(error => {
-                //console.error("Error sending message:", error);
-                showToast("Failed to send message. Please try again.", "error");
+                showToast("Failed to send message. Please try again.", "error", submitButton);
                 submitButton.removeAttribute('disabled');
             });
     }
@@ -97,73 +94,110 @@ function sendEmail(data) {
         });
 }
 
-function showToast(message, type = "success") {
-    const existingToast = document.getElementById('toast-notification');
-    if (existingToast) {
-        document.body.removeChild(existingToast);
-    }
+function showToast(message, type = "success", targetElement = null) {
+    // If a targetElement is provided, we show an inline toast
+    if (targetElement && targetElement.parentNode) {
+        const parent = targetElement.parentNode;
 
-    const toast = document.createElement('div');
-    toast.id = 'toast-notification';
-    toast.className = 'toast-notification';
+        // Remove existing inline toast in this container
+        const existingToast = parent.querySelector('.toast-inline');
+        if (existingToast) {
+            parent.removeChild(existingToast);
+        }
 
-    if (type === "success") {
-        toast.classList.add('toast-success');
-    } else if (type === "error") {
-        toast.classList.add('toast-error');
-    } else if (type === "info") {
-        toast.classList.add('toast-info');
-    }
+        const toast = document.createElement('span');
+        toast.className = 'toast-inline';
 
-    toast.textContent = message;
-    document.body.appendChild(toast);
+        if (type === "success") {
+            toast.classList.add('toast-success');
+        } else if (type === "error") {
+            toast.classList.add('toast-error');
+        } else if (type === "info") {
+            toast.classList.add('toast-info');
+        }
 
-    if (type !== "error") {
+        toast.textContent = message;
+
+        // Insert before the button to align: Text [Button]
+        parent.insertBefore(toast, targetElement);
+
+        // Trigger reflow/animation
         setTimeout(() => {
-            toast.classList.add('toast-hidden');
+            toast.classList.add('show');
+        }, 10);
+
+        // Auto-remove logic
+        if (type !== "error") {
             setTimeout(() => {
-                if (toast && toast.parentNode) {
-                    document.body.removeChild(toast);
-                }
-            }, 300);
-        }, 5000);
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }, 5000);
+        } else {
+            // For errors, maybe keep it until user clicks or next action?
+            // Or just timeout like before but longer?
+            // Existing logic has a close button for errors.
+            // For inline, a close button might be tight.
+            // Let's stick to timeout for now, or click to dismiss.
+
+            toast.style.cursor = 'pointer';
+            toast.title = "Click to dismiss";
+            toast.onclick = () => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            };
+        }
     } else {
-        // Add a close button for errors
-        const closeBtn = document.createElement('span');
-        closeBtn.textContent = '✕';
-        closeBtn.className = 'toast-close-btn';
-        closeBtn.onclick = function () {
-            toast.classList.add('toast-hidden');
+        // Fallback to original fixed positioning implementation
+        const existingToast = document.getElementById('toast-notification');
+        if (existingToast) {
+            document.body.removeChild(existingToast);
+        }
+
+        const toast = document.createElement('div');
+        toast.id = 'toast-notification';
+        toast.className = 'toast-notification';
+
+        if (type === "success") {
+            toast.classList.add('toast-success');
+        } else if (type === "error") {
+            toast.classList.add('toast-error');
+        } else if (type === "info") {
+            toast.classList.add('toast-info');
+        }
+
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        if (type !== "error") {
             setTimeout(() => {
-                if (toast && toast.parentNode) {
-                    document.body.removeChild(toast);
-                }
-            }, 300);
-        };
-        toast.appendChild(closeBtn);
-
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        toast.addEventListener('touchstart', function (e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        toast.addEventListener('touchend', function (e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
                 toast.classList.add('toast-hidden');
-                toast.classList.add('toast-slide-left');
                 setTimeout(() => {
                     if (toast && toast.parentNode) {
                         document.body.removeChild(toast);
                     }
                 }, 300);
-            }
+            }, 5000);
+        } else {
+            const closeBtn = document.createElement('span');
+            closeBtn.textContent = '✕';
+            closeBtn.className = 'toast-close-btn';
+            closeBtn.onclick = function () {
+                toast.classList.add('toast-hidden');
+                setTimeout(() => {
+                    if (toast && toast.parentNode) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            };
+            toast.appendChild(closeBtn);
         }
     }
 }

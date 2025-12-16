@@ -1,5 +1,6 @@
 @import './../shared/constants.css';
 @import './../typography/typography.css';
+@import './../../styles/toast.css';
 
 :host {
     display: none;
@@ -134,6 +135,10 @@ select:focus {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+#submit-btn {
+    cursor: pointer;
 }
 
 /* Light mode overrides */
