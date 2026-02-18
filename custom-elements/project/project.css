@@ -1,21 +1,29 @@
 @import './../icon/icon.css';
 @import './../typography/typography.css';
 
+:host {
+    display: block;
+    width: 100%;
+}
+
 .card {
     position: relative;
     width: 100%;
     min-height: 450px;
     background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--border-hover);
+    background-color: var(--bg-tertiary);
 }
 
 /* Status Badge */

@@ -19,12 +19,13 @@
             <custom-logo onclick="goTo('./index.html', false)"></custom-logo>
             <div id="menu">
                 <custom-a href="./index.html" type="text">Home</custom-a>
-                <custom-a href="./index.html#projects" type="text">Projects</custom-a>
+                <custom-a href="#experience" type="text">Experience</custom-a>
+                <custom-a href="#case-studies" type="text">Case Studies</custom-a>
+                <custom-a href="#education" type="text">Education</custom-a>
                 <custom-a href="#contact-me" type="text">Contact Me</custom-a>
             </div>
             <div id="right-menu">
-                <custom-button id="button-cv" icon="download" size="m" text="CV"
-                    onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
+
                 <custom-icon id="theme-icon" size="l" onclick="toggleTheme()">light_mode</custom-icon>
             </div>
             <div id="burger-menu">
@@ -32,10 +33,11 @@
             </div>
             <div id="burger-menu-content">
                 <custom-a href="./index.html" type="text">Home</custom-a>
-                <custom-a href="./index.html#projects" type="text">Projects</custom-a>
+                <custom-a href="#experience" type="text" onclick="closeMenu()">Experience</custom-a>
+                <custom-a href="#case-studies" type="text" onclick="closeMenu()">Case Studies</custom-a>
+                <custom-a href="#education" type="text" onclick="closeMenu()">Education</custom-a>
                 <custom-a href="#contact-me" type="text" onclick="closeMenu()">Contact Me</custom-a>
-                <custom-button icon="download" size="m" text="CV"
-                    onclick="goTo(`./assets/pdf/cv_guilherme_pinheiro.pdf`)"></custom-button>
+
             </div>
         </header>
 
@@ -48,16 +50,17 @@
                     <custom-typography type="title">About </custom-typography>
                     <custom-typography type="title" weight="extra-bold">Me</custom-typography>
                 </div>
-                <custom-typography mode="light" type="p">I'm Guilherme Pinheiro, an engineer driven by the desire to
-                    make an impact through technology. My passion for creating value is backed by an Executive Master in
-                    Business Innovation and demonstrated through entrepreneurial ventures and side projects focused on
-                    finance and investment.</custom-typography>
-                <custom-typography type="p">I approach every challenge with energy, integrity, and determination. I
-                    believe that the best results come from a proactive mindset and the ability to adapt and grow in an
-                    ever-evolving technological landscape. I pride myself on delivering creative solutions and fostering
-                    environments where teamwork and excellence thrive.</custom-typography>
-                <custom-typography type="p">When not building systems, you'll find me immersed in sports or reading,
-                    constantly looking for the next concept to learn and apply.</custom-typography>
+                <custom-typography mode="light" type="p">I combine the precision of an engineer with the strategic view
+                    of a founder. After years of building scalable systems, I realized I wanted to build ventures, not
+                    just code.</custom-typography>
+                <custom-typography type="p">I approach business with the same mindset I apply to engineering: test,
+                    iterate, and optimize. I have an Executive Master in Business Innovation, but my real education
+                    happens now, prototyping ideas, talking to users, and learning why some products stick while others
+                    fail.</custom-typography>
+                <custom-typography type="p">I am navigating the journey from code to company, looking for the next
+                    problem worth solving. For me, technology is the tool, but sustainable impact is the goal. When I’m
+                    not coding or analyzing markets, I’m immersed in sports or reading, fueling the curiosity that
+                    drives my work.</custom-typography>
             </div>
         </section>
 
@@ -73,7 +76,6 @@
                         modernization as a
                         certified Scrum Master (PSM I & II).
                     </custom-typography>
-                    <br>
                     <custom-typography type="label" weight="bold">
                         Key Technical Achievements:
                     </custom-typography>
@@ -87,7 +89,6 @@
                         premium feature discovery; launched Backstage developer portal and AI-powered automation tools
                         for code migration.
                     </custom-typography>
-                    <br>
                     <custom-typography type="label" weight="bold">
                         Leadership & Impact:
                     </custom-typography>
@@ -123,15 +124,211 @@
             <custom-experience mode="light" logoUrl="https://applogo.connect.visma.com/v1.0/vismanmbrs"
                 title="Software Tester Engineer at Nmbrs" date="Jul. 2021 - Feb. 2022">
                 <div class="experience-content">
-                    Designed a WebApp showcasing expertise in REST API and OAuth 2.0 to facilitate seamless external
-                    system integrations. Simultaneously, I created automated testing frameworks using Selenium and
-                    SpecFlow in .NET to enhance system reliability and functionality across critical workflows.
-                    Furthermore, I conducted comprehensive API and performance tests using Postman and k6, optimizing
-                    and ensuring the accuracy and efficiency of NMBRS's REST API. This hands-on QA experience provided
-                    foundational knowledge in testing methodologies and quality assurance practices that later informed
-                    my full-stack development work.
+                    <custom-typography type="label">
+                        Designed a WebApp showcasing expertise in REST API and OAuth 2.0 to facilitate seamless external
+                        system integrations. Simultaneously, I created automated testing frameworks using Selenium and
+                        SpecFlow in .NET to enhance system reliability and functionality across critical workflows.
+                        Furthermore, I conducted comprehensive API and performance tests using Postman and k6,
+                        optimizing
+                        and ensuring the accuracy and efficiency of NMBRS's REST API. This hands-on QA experience
+                        provided
+                        foundational knowledge in testing methodologies and quality assurance practices that later
+                        informed
+                        my full-stack development work.
+                    </custom-typography>
                 </div>
             </custom-experience>
+        </section>
+
+        <section id="case-studies" class="cards-projects">
+            <custom-typography type="title" weight="extra-bold">Case Studies</custom-typography>
+
+            <custom-project id="project-04" imageUrl="./assets/projects/project_04.jpg" title="Wattra" status="done">
+                Wattra accelerates the transition to low-carbon digital infrastructure by turning energy from a cost
+                into an intelligent asset.
+            </custom-project>
+
+            <custom-project id="project-03" imageUrl="./assets/projects/project_03.png" title="Post2Pod" status="done">
+                Learn by listening, leave the reading for us.
+            </custom-project>
+            <custom-project-popup id="popup-project-03" projectName="Post2Pod">
+                <custom-typography slot="project-links" type="p">
+                    Link: <custom-a
+                        href="https://chromewebstore.google.com/detail/post2pod/kefgonodhaenfngajinllecbnfkeaohn">Chrome
+                        Extension</custom-a>
+                </custom-typography>
+                <custom-typography slot="project-links" type="p">
+                    Developed By: Post2Pod Team
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
+                    <custom-typography type="label">AI</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/figma.svg"></custom-icon>
+                    <custom-typography type="label">Figma</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                    <custom-typography type="label">Github</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
+                    <custom-typography type="label">GC</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
+                    <custom-typography type="label">React</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/vite.svg"></custom-icon>
+                    <custom-typography type="label">Vite</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">Post2Pod was designed to solve the common
+                    pain of information overload for busy professionals and lifelong learners - transforming news
+                    articles, blog posts, newsletters, and even LinkedIn posts into podcast episodes, ready to stream on
+                    any preferred listening app. The goal was simple: take unread, "save-for-later" lists and turn them
+                    into personalized audio content, freeing users from screen fatigue and letting them learn while on
+                    the go.</custom-typography>
+
+                <img slot="project-description" src="./assets/projects/project_03.png" alt="Post2Pod Interface"
+                    style="width: 100%; border-radius: 8px; margin-top: 1.5rem;">
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Core
+                    Features</custom-typography>
+                <custom-typography slot="project-description" type="label">Chrome Extension: The free browser extension
+                    lets users instantly convert any public article, blog post, or newsletter into a podcast episode by
+                    clicking in their browser.</custom-typography>
+                <custom-typography slot="project-description" type="label">Personalized Feeds: Each user receives a
+                    unique podcast RSS feed to subscribe in apps like Apple Podcasts or Pocket Casts, with new episodes
+                    delivered automatically.</custom-typography>
+                <custom-typography slot="project-description" type="label">B2B White Label: For businesses, Post2Pod
+                    offered a white label portal, enabling companies to create their own internal audio portals and
+                    transform knowledge sharing networks into on-demand podcasts.</custom-typography>
+                <custom-typography slot="project-description" type="label">Cross-Platform Delivery: Except for platforms
+                    like Spotify (which limits private feeds), users could listen on iOS, Android, and most major
+                    podcast apps.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Community and
+                    Reach</custom-typography>
+                <custom-typography slot="project-description" type="label">Post2Pod gained traction in podcasting,
+                    productivity, and tech communities - highlighted on Reddit, newsletters, and by word-of-mouth from
+                    listeners seeking to make personalized content consumption more convenient. Feedback emphasized its
+                    value as a tool for learning, multitasking, and reducing digital overwhelm.</custom-typography>
+
+                <img slot="project-description" src="./assets/projects/project_03_linkedin.jpg"
+                    alt="Post2Pod Community Engagement" style="width: 100%; border-radius: 8px; margin-top: 1.5rem;">
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Lessons
+                    Learned</custom-typography>
+                <custom-typography slot="project-description" type="label">Despite the promise, Post2Pod saw slow
+                    adoption and a limited user base. In retrospect, this was a classic case of launching a solution
+                    before deeply validating the problem. As a Business Innovation master's graduate, the approach would
+                    now be different: focusing first on in-depth discovery, interviewing users, experimenting with
+                    prototypes, and letting the market signal its strongest needs before building and selling. This
+                    iterative, customer-driven model would have surfaced real pain points early, informed commercial
+                    strategy, and improved user acquisition.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Decision to
+                    Close</custom-typography>
+                <custom-typography slot="project-description" type="label">Ultimately, Post2Pod was discontinued due to
+                    a low number of users, underscoring the importance of grounding product development in clear,
+                    validated customer problems for sustainable growth.</custom-typography>
+            </custom-project-popup>
+
+            <custom-project id="project-02" imageUrl="./assets/projects/project_02.png" title="Stock Analysis Algorithm"
+                status="done">
+                Algorithm that is segmented into 4 parts: Stock Analysis System, Recommendation Engine, Economic Factors
+                Monitor and Identity Service.
+            </custom-project>
+            <custom-project-popup id="popup-project-02" projectName="SAA: Unlocking the Power of Value Investing">
+                <custom-typography slot="project-links" type="p">
+                    Developed By: <custom-a onclick="goTo('https://www.linkedin.com/in/gppinheiro/')">Me</custom-a>
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/git.png"></custom-icon>
+                    <custom-typography type="label">Git</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/github.svg"></custom-icon>
+                    <custom-typography type="label">Github</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/oracle.svg"></custom-icon>
+                    <custom-typography type="label">Oracle</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">This project began from a strong desire to
+                    explore diverse tech stacks and software engineering patterns while pursuing my passion for
+                    data-driven investing. Motivated by a goal to generate passive income exceeding my monthly earnings,
+                    I developed a Stock Picking Algorithm focused on US stocks using publicly available data from SEC
+                    and economic indicators from the Bureau of Economic Analysis - all at zero cost.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">System
+                    Architecture</custom-typography>
+                <custom-typography slot="project-description" type="label">The algorithm is modularized into four
+                    systems:</custom-typography>
+                <custom-typography slot="project-description" type="label">- Stock Analysis System leveraging principles
+                    from Value and Fundamental Investing plus basic technical analysis,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Recommendation Engine suggesting stocks to
+                    buy or monitor,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Economic Factors Monitor tracking key
+                    macroeconomic indicators,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Identity Service securing service
+                    APIs.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Performance and
+                    Evolution</custom-typography>
+                <custom-typography slot="project-description" type="label">After running the system for a year, the
+                    portfolio averaged around 18% profitability despite initial missteps. My tech stack journey evolved
+                    from AWS Free Tier PostgreSQL, to Raspberry Pi with MariaDB, and ultimately to Oracle with PL/SQL
+                    for greater reliability and reduced maintenance.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Key
+                    Learnings</custom-typography>
+                <custom-typography slot="project-description" type="label">- Vigilance around cloud service costs is
+                    critical,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Hands-on infrastructure experience is
+                    invaluable but time-consuming,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Flexibility to adapt queries and refactor
+                    algorithms is essential when changing database platforms,</custom-typography>
+                <custom-typography slot="project-description" type="label">- Investing in a robust solution balances
+                    complexity and reliability.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Data
+                    Management</custom-typography>
+                <custom-typography slot="project-description" type="label">Data consistency and API rate limits were
+                    carefully managed through validation steps and custom exceptions. The system currently focuses on US
+                    public companies with plans to expand to global markets while maintaining
+                    cost-effectiveness.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Transition to
+                    AI</custom-typography>
+                <custom-typography slot="project-description" type="label">Ultimately, I decided to replace this
+                    algorithm with two AI-powered workflows that leverage complex techniques for stock evaluation and
+                    selection. It requires more manual work now, but the results are way better. If you want to learn
+                    more about this transition or the AI workflows, feel free to ping me.</custom-typography>
+            </custom-project-popup>
         </section>
 
         <section id="education" class="cards">
@@ -161,7 +358,6 @@
                         Object-Oriented Programming in Java, Operations Management, Operations Research, Robotics, and
                         Systems Engineering.
                     </custom-typography>
-                    <br>
                     <custom-typography type="label">
                         Master's thesis titled "Analytical Revenue Management in a Car Rental Company" (Grade 19/20)
                         implemented a dynamic revenue management system optimizing station capacity and booking
@@ -188,8 +384,8 @@
 
     <custom-contact-popup></custom-contact-popup>
     <custom-nmbrs-popup></custom-nmbrs-popup>
-    <custom-chat-bubble></custom-chat-bubble>
-    <custom-chat-popup></custom-chat-popup>
+    <!-- <custom-chat-bubble></custom-chat-bubble>
+    <custom-chat-popup></custom-chat-popup> -->
 
     <footer>
         <div class="footer-content">
@@ -199,14 +395,29 @@
             <div class="footer-right">
                 <div class="footer-column">
                     <custom-typography type="h4">Navigation</custom-typography>
-                    <custom-a href="./index.html">
+                    <custom-a href="./about-me.html">
                         <custom-typography type="h4">
-                            Home
+                            About Me
                         </custom-typography>
                     </custom-a>
-                    <custom-a href="./index.html#projects">
+                    <custom-a href="./index.html#ventures">
                         <custom-typography type="h4">
-                            Projects
+                            Ventures
+                        </custom-typography>
+                    </custom-a>
+                    <custom-a href="#experience">
+                        <custom-typography type="h4">
+                            Experience
+                        </custom-typography>
+                    </custom-a>
+                    <custom-a href="#case-studies">
+                        <custom-typography type="h4">
+                            Case Studies
+                        </custom-typography>
+                    </custom-a>
+                    <custom-a href="#education">
+                        <custom-typography type="h4">
+                            Education
                         </custom-typography>
                     </custom-a>
                     <custom-a href="#contact-me">

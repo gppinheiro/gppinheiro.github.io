@@ -1,68 +1,107 @@
 @import './../typography/typography.css';
 
+:host {
+    display: block;
+    width: 100%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    padding: 30px 24px;
-    gap: 28px;
-    border-radius: 10px;
-    border: 1px solid var(--black);
-    flex-grow: 1;
+    padding: 24px;
+    gap: 16px;
+    border-radius: var(--radius-l);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    transition: all 0.2s ease;
+    cursor: default;
 }
 
-.dark {
-    background-color: var(--black);
-    border-color: var(--zinc-500);
-}
-
-.light {
-    background-color: var(--zinc-800);
-    border-color: var(--zinc-800);
+.container:hover {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
 }
 
 .container .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .container .header .role {
     display: flex;
     align-items: center;
-    gap: 28px;    
+    gap: 16px;
 }
 
 .container .header .role img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    /* Square with radius for Linear feel */
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* subtle bg for logos */
+    padding: 4px;
 }
 
 .container .header .date {
-    justify-self: flex-end;
+    white-space: nowrap;
+}
+
+/* Typography Overrides */
+.header custom-typography[type='h3'] {
+    color: var(--text-primary);
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    margin: 0;
 }
 
 .container .header custom-typography[type='label'] {
-    text-align: right;
-    margin-left: auto;
-    color: var(--zinc-300);
+    color: var(--text-secondary);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-medium);
 }
 
-.header custom-typography[type='h3'] {
-    color: var(--white);
+/* Description styling */
+.container>custom-typography[type='label'] {
+    color: var(--text-secondary);
+    font-size: var(--font-size-p);
+    /* Make it readable like body text */
+    line-height: var(--line-height-p);
+    margin-top: 4px;
 }
 
-custom-typography {
-    color: var(--zinc-300);
+/* Slot content adjustment */
+::slotted(*) {
+    margin: 0;
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p);
+    line-height: var(--line-height-p);
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
     .container .header {
         flex-direction: column;
-        gap: 28px;
-        align-items: unset;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .container .header .role {
+        width: 100%;
     }
 
     .container .header .date {
-        justify-self: flex-start;
+        align-self: flex-start;
+        margin-left: 56px;
+        /* align with text, bypassing logo width (40+16) */
+        color: var(--text-tertiary);
     }
 }

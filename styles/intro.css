@@ -30,7 +30,18 @@
     align-self: center;
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 24px;
+}
+
+#intro #intro-content #intro-media a img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+#intro #intro-content #intro-media a:hover img {
+    opacity: 1;
 }
 
 #intro img {

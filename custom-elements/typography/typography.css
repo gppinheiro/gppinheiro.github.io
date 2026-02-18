@@ -27,6 +27,7 @@ custom-typography[type='h3'] {
 custom-typography[type='p'] {
     font-size: var(--font-size-p);
     line-height: var(--line-height-p);
+    color: var(--text-secondary);
 }
 
 custom-typography[type='label'] {

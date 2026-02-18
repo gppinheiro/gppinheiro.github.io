@@ -1,77 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Colors */
-    --text: #18181B;
-    --black: #000000;
-    --neutral: #404040;
+    /* Base Colors - Linear-like Palette */
+    --text: #EEEEEE;
+    --black: #08090A;
+    /* Deep rich black */
+    --neutral: #8A8F98;
     --white: #FFFFFF;
+
+    /* Zinc Scale (approximated for Linear feel) */
+    --zinc-50: #FAFAFA;
     --zinc-100: #F4F4F5;
     --zinc-200: #E4E4E7;
     --zinc-300: #D4D4D8;
+    --zinc-400: #A1A1A1;
     --zinc-500: #71717A;
+    --zinc-600: #52525B;
+    --zinc-700: #3F3F46;
     --zinc-800: #27272A;
-    --error: #EF4444;
-    --success: #48826e;
-    --info: #186fb6;
+    --zinc-900: #18181B;
 
     /* Semantic Colors */
-    --bg-primary: var(--black);
-    --bg-secondary: var(--zinc-800);
-    --text-primary: var(--white);
-    --text-secondary: var(--zinc-300);
-    --header-bg: rgba(255, 255, 255, 0.7);
-    --footer-bg: transparent;
-    --icon-color: var(--white);
-    --line-color: var(--zinc-500);
-    --border-color: var(--zinc-500);
+    --bg-primary: #08090A;
+    /* Deep rich black */
+    --bg-secondary: rgba(255, 255, 255, 0.03);
+    /* Subtle card bg */
+    --bg-tertiary: rgba(255, 255, 255, 0.06);
+    /* Hover state */
 
-    /* Typography */
-    --font-family: 'Open Sans', sans-serif;
+    --text-primary: #EDEDED;
+    --text-secondary: #A1A1AA;
+    --text-tertiary: #52525B;
+
+    --border-color: rgba(255, 255, 255, 0.1);
+    /* Subtle but visible border */
+    --border-hover: rgba(255, 255, 255, 0.2);
+
+    --accent-primary: #FFFFFF;
+    --accent-glow: rgba(255, 255, 255, 0.2);
+
+    --header-bg: rgba(5, 5, 5, 0.8);
+    --footer-bg: transparent;
+    --icon-color: var(--text-secondary);
+    --line-color: var(--border-color);
+
+    /* Status Colors */
+    --error: #F87171;
+    --success: #4ADE80;
+    --info: #60A5FA;
+    --warning: #FBBF24;
+
+    /* Typography - Inter */
+    --font-family: 'Inter', sans-serif;
+
     --font-weight-regular: 400;
+    --font-weight-medium: 500;
     --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
     --font-weight-extra-bold: 800;
+
     --font-size-title: 48px;
     --font-size-h1: 36px;
     --font-size-h2: 32px;
-    --font-size-h3: 28px;
-    --font-size-p: 20px;
-    --font-size-label: 16px;
-    --line-height-title: 56px;
-    --line-height-h1: 44px;
-    --line-height-h2: 40px;
-    --line-height-h3: 32px;
-    --line-height-p: 24px;
-    --line-height-label: 20px;
+    --font-size-h3: 24px;
+    --font-size-p: 18px;
+    --font-size-label: 14px;
+    --font-size-small: 13px;
 
-    /* Size */
+    /* Icon Sizes */
     --font-size-s: 16px;
-    --font-size-m: 20px;
-    --font-size-l: 24px;
-    --font-size-xl: 32px;
+    --font-size-m: 24px;
+    --font-size-l: 32px;
+    --font-size-xl: 48px;
+
+    --line-height-title: 1.2;
+    --line-height-h1: 1.2;
+    --line-height-h2: 1.3;
+    --line-height-h3: 1.4;
+    --line-height-p: 1.6;
+    --line-height-label: 1.5;
+
+    /* Spacing & Layout */
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --radius-xl: 24px;
 }
 
 @media screen and (max-width: 768px) {
     :root {
-        --font-size-title: 28px;
+        --font-size-title: 32px;
+        --font-size-h1: 28px;
         --font-size-h2: 24px;
         --font-size-h3: 20px;
         --font-size-p: 16px;
-        --font-size-label: 12px;
-
-        --line-height-title: 32px;
-        --line-height-h2: 24px;
+        --font-size-label: 13px;
     }
-
 }
 
+/* Light Mode Overrides (Optional/Future-proof) */
 body.light-mode {
-    --bg-primary: var(--white);
-    --bg-secondary: var(--zinc-100);
-    --text-primary: var(--black);
-    --text-secondary: var(--zinc-500);
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F4F4F5;
+    --bg-tertiary: #E4E4E7;
+    --text-primary: #18181B;
+    --text-secondary: #71717A;
+    --text-tertiary: #A1A1AA;
+    --border-color: #E4E4E7;
+    --border-hover: #D4D4D8;
     --header-bg: rgba(255, 255, 255, 0.9);
-    --icon-color: var(--black);
-    --border-color: var(--zinc-300);
 }
