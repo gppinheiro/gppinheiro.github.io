@@ -16,7 +16,7 @@
 <body class="dark-mode">
     <main>
         <header>
-            <custom-logo onclick="goTo('./index.html', false)"></custom-logo>
+            <custom-logo mode="light" onclick="goTo('./index.html', false)"></custom-logo>
             <div id="menu">
                 <custom-a href="./index.html" type="text">Home</custom-a>
                 <custom-a href="#experience" type="text">Experience</custom-a>
@@ -328,6 +328,55 @@
                     algorithm with two AI-powered workflows that leverage complex techniques for stock evaluation and
                     selection. It requires more manual work now, but the results are way better. If you want to learn
                     more about this transition or the AI workflows, feel free to ping me.</custom-typography>
+            </custom-project-popup>
+
+            <custom-project-popup id="popup-project-04" projectName="Wattra">
+                <custom-typography slot="project-links" type="p">
+                    Developed By: Wattra Team
+                </custom-typography>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/python.svg"></custom-icon>
+                    <custom-typography type="label">Python</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/ai.svg"></custom-icon>
+                    <custom-typography type="label">AI/ML</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/react.svg"></custom-icon>
+                    <custom-typography type="label">Dashboard</custom-typography>
+                </span>
+
+                <span slot="project-tools" class="project-tool">
+                    <custom-icon size="xl" img="./assets/icons/google_cloud.svg"></custom-icon>
+                    <custom-typography type="label">Cloud</custom-typography>
+                </span>
+
+                <custom-typography slot="project-description" type="label">Wattra is an AI-driven orchestration layer
+                    that helps small and mid-sized data centers in Iberia turn volatile energy costs and carbon
+                    constraints into predictable savings, without any hardware changes or downtime. It unifies real‑time
+                    data from consumption, market prices (MIBEL), renewables, and cooling into a single dashboard, then
+                    recommends concrete actions like contract switching, load shifting, and battery or PV
+                    optimization.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Platform
+                    Overview</custom-typography>
+                <custom-typography slot="project-description" type="label">Where operators today juggle spreadsheets,
+                    brokers, DCIM/BMS tools, and separate ESG reports, Wattra merges procurement, operations, and carbon
+                    reporting into one adaptive platform, with every saving quantified and
+                    auditable.</custom-typography>
+
+                <custom-typography slot="project-description" type="p" style="margin-top: 2rem;">Business Model &
+                    Impact</custom-typography>
+                <custom-typography slot="project-description" type="label">The business model combines a SaaS
+                    subscription with onboarding services and a success fee on verified savings, aligning Wattra’s
+                    revenue with the client’s energy and CO₂ reductions. Early pilots with university and SME data
+                    centers (e.g., U.Porto Digital, InescTec, Deucalion) focus on validating 8–12% energy cost savings
+                    and around 10% annual CO₂ reduction while simplifying CSRD‑aligned ESG
+                    reporting.</custom-typography>
             </custom-project-popup>
         </section>
 

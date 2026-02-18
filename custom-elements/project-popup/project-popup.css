@@ -115,7 +115,8 @@
 }
 
 .popup .project-quick-links custom-typography[type="label"] {
-    color: var(--text-secondary);
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .popup .project-quick-links custom-typography:not([type="label"]) {
